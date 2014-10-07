@@ -1,0 +1,19 @@
+// Text overflow
+// Requires inline-block or block for proper styling
+
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+@mixin thin{ font-weight: 100;}
+@mixin med{ font-weight: 400;}
+@mixin thick{ font-weight: 800;}
+
+@mixin img-center{
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+}
