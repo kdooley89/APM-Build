@@ -30,6 +30,9 @@
 
 <body>
 
+
+
+
     <div class="col-md-12 topbar hidden-xs">
         <div class="container">
             <div class="col-md-8">&nbsp;</div>
@@ -40,7 +43,20 @@
         </div>
     </div>
 
-   
+  
+  
+  
+   <div class="col-md-12 mobile-menu">
+  <a href="index.html">
+    <img src="assets/img/dynatrace_web.png" class="image-responsive default-logo" width="250px">
+    </a>
+
+    <a href="#" class="menu"><i class="fa fa-2x fa-bars"></i></a>
+  
+</div>
+
+     
+     
       <!-- start Menu Container-->
     <div class="flex-container">
         <div class="main">
@@ -306,29 +322,27 @@
             <div class="dyna-stats">
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 social-stats">
                     <img class="img-responsive img-center" src="assets/img/downloads.png">
-                    <p>#<span class="timer" id="customers" data-from="10" data-to="1" data-speed="1000"  style="font-size:3em; color:#6ea634;"><strong>1</strong></span>
+                    <p><span style="font-size:3em; color:#6ea634;"><strong>#1</strong></span>
                      <br> 
                     <span style="font-size: 1.2em; font-style:italic; opacity: .65;">in APM Market Share</span></p>
                 </div>
 
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 social-stats">
                     <img class="img-responsive img-center" src="assets/img/users.png">
-                    
-                    
-                   <p><span class="timer" id="customers" data-from="5600" data-to="5700" data-speed="1000" style="font-size:3em; color:#6ea634;"><strong>5,700</strong></span>
+                   <p><span style="font-size:3em; color:#6ea634;"><strong>5,700</strong></span>
                      <br> 
                     <span style="font-size: 1.2em; font-style:italic; opacity: .65;">Global Customers</span></p>
                 </div>
 
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 social-stats">
                     <img class="img-responsive img-center" src="assets/img/companies.png">
-                    <p><span class="timer" id="customers" data-from="81000" data-to="82000" data-speed="1000" style="font-size:3em; color:#6ea634;"><strong>82,000</strong></span>
+                    <p><span style="font-size:3em; color:#6ea634;"><strong>82,000</strong></span>
                      <br> 
                     <span style="font-size: 1.2em; font-style:italic; opacity: .65;">Community Geniuses</span></p>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 social-stats">
                     <img class="img-responsive img-center" src="assets/img/countries.png">
-                    <p><span class="timer" id="netpromo" data-from="75" data-to="89" data-speed="1000"  style="font-size:3em; color:#6ea634;"><strong>89</strong></span>
+                    <p><span style="font-size:3em; color:#6ea634;"><strong>84%</strong></span>
                      <br> 
                     <span style="font-size: 1.2em; font-style:italic; opacity: .65;">Net Promoter Score</span></p>
                 </div>
@@ -647,66 +661,6 @@ Get your FREE personalized report today and know how your users experience your 
   
   
    
-   <script src="assets/javascripts/bootstrap/jquery.countTo.js"></script>
-   
-    <script type="text/javascript">
-    jQuery(function ($) {
-      // custom formatting example
-      $('#market').data('countToOptions', {
-        formatter: function (value, options) {
-          return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
-        }
-      });
-        
-        $('#customers').data('countToOptions', {
-        formatter: function (value, options) {
-          return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
-        }
-      });
-      $('#community').data('countToOptions', {
-        formatter: function (value, options) {
-          return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
-        }
-      });
-      $('#netpromo').data('countToOptions', {
-        formatter: function (value, options) {
-          return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
-        }
-      });
-      
-        
-      
-      // custom callback when counting completes
-      $('#countdown').data('countToOptions', {
-        onComplete: function (value) {
-          $(this).text('BLAST OFF!').addClass('red');
-        }
-      });
-      
-    
-      
-      // start all the timers
-        
-      $('.timer').each(count);
-      
-    
-      
-      function count(options) {
-        var $this = $(this);
-        options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-        $this.countTo(options);
-      }
-    });
-  </script>
-   
-   
-   
-   
-   
-   
-   
-   
-   
    
     <script>
         // Cache selectors
@@ -783,23 +737,18 @@ Get your FREE personalized report today and know how your users experience your 
     </script>
 
 
-    <script>
-        $('a[href*="#"]').click(function (e) {
-            e.preventDefault();
-            if ($(this).attr('href') == '#') {
-                $('html, body').animate({
-                    scrollTop: $('body').offset().top
-                }, 1000);
-                window.location.hash = '';
-            } else {
-                $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top - $(this).height()
-                }, 1000);
-                window.location.hash = $(this).attr('href');
-            }
-            return false;
-        });
-    </script>
+<script> 
+$(document).ready(function(){
+  $(".menu").click(function(){
+    $(".flex-container").slideToggle("slow");
+  });    
+});
+</script>
+
+
+
+
+
 
 
 

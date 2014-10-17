@@ -1,5 +1,4 @@
 #cssmenu {
-  background: #ebebeb;
   //width: auto;
 }
 #cssmenu ul {
@@ -33,7 +32,7 @@
   color: #222222;
   text-decoration: none;
   display: block;
-  padding: 15px 15px 15px 15px;
+  padding: 25px 15px 27px 15px;
   font-family: $fontstack;
   font-weight: 300;
   text-transform: uppercase;
@@ -47,7 +46,7 @@
 }
 #cssmenu ul li a:hover {
   color: #333333;
-  background-color: $sticky-hover;
+  background-color: rgba(217,219,218,.6); 
 }
 /*#cssmenu ul li a:hover:before {
   width: 100%;
@@ -106,19 +105,22 @@ background-color: $sticky-hover;
 
 
 .sticky{
-background-color: $sticky-bg;
+background-color: rgba(234, 234, 234, .9);
 border-bottom: 1px solid $sticky-hover;
-height: 48px;
+height: 70px;
 z-index: 1;
     .snap-buttons{
         .default-button, .secondary-button{
+            padding-top: 10px;
             float: right;
             margin: 4px;
         }
     
     }
         
-   
+   .snap-buttons{
+   padding-top: 10px;
+   }
     
    
     .container{padding-bottom:0px;
