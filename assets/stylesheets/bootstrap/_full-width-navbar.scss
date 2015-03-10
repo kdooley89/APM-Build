@@ -189,7 +189,7 @@ li{
 /* Main menu wrapper */
 .cbp-hsmenu-wrapper {
 	position: relative;
-    border-bottom: 2px solid #eeeeee;
+    //border-bottom: 2px solid #eeeeee;
 }
 
 /* Common style for all lists */
@@ -237,7 +237,7 @@ li{
 	outline: none;
 }
 
- 
+
 
 .no-touch .cbp-hsmenu > li > a:hover,
 .no-touch .cbp-hsmenu > li > a:focus,
@@ -248,7 +248,7 @@ li{
     @include transition (all 300ms ease-in-out);
 }
 
-//Add an arrow to the main menu link if it has a submenu (not the only child) 
+//Add an arrow to the main menu link if it has a submenu (not the only child)
 .cbp-hsmenu > li > a:not(:only-child):before {
 	display: inline-block;
 	font-family: 'FontAwesome';
@@ -272,7 +272,7 @@ li{
 
 
 
-/// Submenu style 
+/// Submenu style
 .cbp-hssubmenu {
 	position: absolute;
 	left: 2%;
@@ -289,7 +289,7 @@ li{
 
 
 
-.cbp-hssubmenu h1{
+.cbp-hssubmenu .offerings{
     font-size: 1.5em;
     font-weight: 400;
     text-decoration: none;
@@ -300,13 +300,13 @@ li{
 
 }
 
-.cbp-hssubmenu:before, 
-.cbp-hssubmenu:after { 
-	content: " "; 
-	display: table; 
+.cbp-hssubmenu:before,
+.cbp-hssubmenu:after {
+	content: " ";
+	display: table;
 }
-.cbp-hssubmenu:after { 
-	clear: both; 
+.cbp-hssubmenu:after {
+	clear: both;
 }
 
 // Let's allow 6 item in a row
@@ -318,20 +318,20 @@ li{
 	-webkit-transition: opacity 0.1s 0s;
 	-moz-transition: opacity 0.1s 0s;
 	transition: opacity 0.1s 0s;
-    h2{
+    .product-title{
     font-size: 1.15em;
     font-weight: 600;
     padding-bottom: 0px;
     margin-bottom: 15px;
     }
-    h3{
+    .product-item{
     font-size: 1.15em;
-    font-weight: 300;
-    padding-bottom: 0px;
+    //font-weight: 300;
+    padding-bottom: 5px;
     }
-    
+
     p{
-    padding-left:25px;
+    //padding-left:25px;
     }
 }
 
@@ -342,7 +342,7 @@ margin-bottom: 40px!important;
 // First 6 items don't have upper box shadow
 .cbp-hssubmenu > li:nth-child(-n+6) {
 	//box-shadow: -28px 0 0 -27px #ddd;
-} 
+}
 
 //Every 7th item does not have a left box shadow
 .cbp-hssubmenu > li:nth-child(6n+1) {
@@ -372,9 +372,9 @@ margin-bottom: 40px!important;
 	display: inline-block;
 	margin: 0;
 	max-width: 100%;
-	-webkit-transition: opacity 0.2s;
-	-moz-transition: opacity 0.2s;
-	transition: opacity 0.2s;
+	-webkit-transition: opacity 0.3s;
+	-moz-transition: opacity 0.3s;
+	transition: opacity 0.3s;
 }
 
 .no-touch .cbp-hssubmenu > li a:hover img {
@@ -410,10 +410,10 @@ margin-bottom: 40px!important;
 	left: 0px;
 	z-index: 3;
 	height: 0px;
-    -webkit-box-shadow: 0px 25px 25px -5px rgba(50,50,50,0.5); 
+    -webkit-box-shadow: 0px 25px 25px -5px rgba(50,50,50,0.5);
     -moz-box-shadow:    0px 25px 25px -5px rgba(50,50,50,0.5);
     box-shadow:         0px 25px 25px -5px rgba(50,50,50,0.5);
-    
+
 }
 
 .no-touch .cbp-hsmenubg {
@@ -435,14 +435,18 @@ margin-bottom: 40px!important;
     margin-right:auto;
     display: block;
     }
-    
-    
+
+    .cbp-hssubmenu>li .product-item {
+        font-size: 1.15em;
+        padding-bottom: 20px;
+    }
+
 .cbp-hsinner .container{
     padding: 0px;
         margin:0px;
-    }   
+    }
 }
-    
+
 
 
 //MAX 51em MEDIA QUERIES-------------------------------------------
@@ -508,7 +512,7 @@ margin-bottom: 40px!important;
 	/* First 4 items don't have upper box shadow */
 	.cbp-hssubmenu > li:nth-child(-n+3) {
 		//box-shadow: -28px 0 0 -27px #ddd;
-	} 
+	}
 
 	/* Every 5th item does not have a left box shadow */
 	.cbp-hssubmenu > li:nth-child(3n+1) {
@@ -520,8 +524,8 @@ margin-bottom: 40px!important;
     width: 50%;
         }
     }
-    
-    
+
+
 .menu-products{
         width: 100% !important;
         margin-right: 35px;
@@ -544,7 +548,7 @@ margin-bottom: 40px!important;
     width: 100% !important;
     }
 
-    
+
 }
 
 
@@ -558,7 +562,7 @@ margin-bottom: 40px!important;
 		width: 100% !important;
 		display: block;
 	}
-    
+
     .cbp-hsmenu img{
         margin-left: auto;
         margin-right:auto;
@@ -584,7 +588,7 @@ margin-bottom: 40px!important;
 		min-height: 0;
 		margin: 0;
 	}
-    
+
     .menu-products li{
         width: 100% !important;
         margin-right: 35px;
@@ -605,8 +609,8 @@ margin-bottom: 40px!important;
     width: 100% !important;
     }
 
-    
-    
+
+
 }
 
 
@@ -631,7 +635,7 @@ float: left;
     .cbp-hssubmenu {
         padding-bottom: 0px !important;
         margin-bottom: 0px !important;
-    }  
+    }
 }
 
 
@@ -650,12 +654,13 @@ input[type="text"] {
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
 	background: white;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
+	color:#222222;
+	//-webkit-border-radius: 20px;
+	//-moz-border-radius: 20px;
+  //border-radius: 20px;
 	height: 20px;
 	border: 1px solid rgba(0,0,0,0.2);
-	width: 100px;
+	//width: 100%;
 	padding: 3px 23px 3px 8px;
 }
 
@@ -663,9 +668,9 @@ input[type="reset"] {
 	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAGFBMVEUAAAC/v7+/v7+/v7+/v7+/v7+/v7+/v7+hAPa4AAAAB3RSTlMAQNCwkKDgPaU3lgAAAEZJREFUeNplj9EKACAIA2dm+/8/bkj4sI6wDsIpRCRFBprNxx4bD12LrwRSDxRZkCcoCqVDIW1v+9Q+W6sOOhNkY9iQtsIFhO0DtcbsWN0AAAAASUVORK5CYII=');
 	width: 14px;
 	height: 14px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
+	//-webkit-border-radius: 8px;
+	//-moz-border-radius: 8px;
+	//border-radius: 8px;
 	border: 0;
 	text-indent: -999px;
 	position: absolute;
@@ -686,6 +691,59 @@ input[type="text"]:invalid + input[type="reset"] {
 }
 
 
+.searchcontent{
+	padding-left:15px;
+	padding-top:5px;
+	display:none;
+	float:right;
+}
+
+
+
+
+input[type=search]{
+	-webkit-appearance:textfield;
+	-webkit-box-sizing:content-box;
+	font-family:inherit;
+	font-size:100%;
+	display:inline;
+}
+
+input::-webit-searchdecoration, input::-qwbit-search-cancel-button{
+	display:none;
+}
+
+
+
+input[type=search]{
+	background: #4b4b4f url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANJJREFUeNp00T8LQVEYx3H3kpKYFLIb8AIMBpkVmbwNg0nJaPEO/LmzRbwAu1lYjAySPynF4vgenlMn5Vef2/nz9PScrqOU8pEwyqgghhumQq+/oTiCLh7qmzNesh8grht+mvJpSdEWbVTQxFrOdaOQKT7hgJLpIPLY4YKCKdaZwf0p1jy5r+m9K6NHhR3XOnuaBy5wRwcBq2tDRtD3aTNGFTc8MUEfY1xlhDlSptiPuvV6kw1Wsh4i6chP0ckhgwSOWCKIHooY2cX/koWH/VuAAQAeDyDWnIcSKAAAAABJRU5ErkJggg==) 5px center no-repeat;
+	border: solid 1px #4b4b4f;
+	//padding: 9px 10px 9px 32px;
+	@include transition (all 500ms ease);
+}
+
+#topsearch{
+	display:inline;
+}
+
+#topsearch input[type=search]{
+	float: right;
+	width:0px;
+	padding-left:20px;
+	color: transparent;
+	cursor: pointer;
+	&:hover{
+		background-color:#4b4b4f;
+	}
+	&:focus{
+		width:200px;
+		padding-left:32px;
+		color:#fff;
+		background-color:#4b4b4f;
+		cursor:auto;
+		z-index:5;
+	}
+}
 
 
 
@@ -698,12 +756,13 @@ input[type="text"]:invalid + input[type="reset"] {
         display: none;
         }
         }
-     
+
      .mobile-menu{
         padding:5px;
          img{
          margin-left:20px;
-         max-width: 70%;  
+         max-width: 50%;
+				padding-bottom:20px;
          }
          .menu{
          float: right;
@@ -717,8 +776,24 @@ input[type="text"]:invalid + input[type="reset"] {
     .mobile-menu{
         display: none;
         }
+    
+    .flex-container{
+        display: block;
+    }
+    
     }
 
+@media(max-width:320px){
+.mobile-menu{ 
+    img{
+    padding-top: 20px;
+    }
+    .menu{
+    margin: 10px 26px 0px 0px;
+    }
+ }
+}
+
 .active-menu{
-    color: $apm-green; 
+    color: $apm-green;
 }

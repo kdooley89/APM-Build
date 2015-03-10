@@ -1,10 +1,10 @@
 /* Preload images */
 body:after {
-  content: url(../img/close.png) url(../img/loading.gif) url(../img/prev.png) url(../img/next.png);
+  //content: url(../img/close.png) url(../img/loading.gif) url(../img/prev.png) url(../img/next.png);
   display: none;
 }
 
-.lightboxOverlay {
+.lightboxOverlay { 
   position: absolute;
   top: 0;
   left: 0;
@@ -26,7 +26,7 @@ body:after {
 }
 
 .lightbox .lb-image {
-   
+
   display: block;
   height: auto !important;
   max-width: 100% !important;

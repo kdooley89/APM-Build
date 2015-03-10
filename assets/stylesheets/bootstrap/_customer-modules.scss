@@ -1,0 +1,514 @@
+//new customer pieces for the homepage
+//en customer backgrounds
+@mixin customer-background-full-en {
+    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/mcgraw-hill-bg.jpg);
+}
+
+@mixin customer-background-left-en {
+    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/premier-bg.jpg);
+}
+
+@mixin customer-background-right-en {
+    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/nordstrom-bg.jpg);
+}
+
+//start generic wrappers for customer homepage content
+.media-full-width-wrapper {
+    position: relative;
+}
+
+.media-full-width {
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    height: 480px;
+    padding: 0px;
+}
+
+.media-title {
+    position: relative;
+    clear: both;
+    float: right;
+    background-color: #73b200;
+    color: white;
+    min-width: 475px;
+    padding-left: 45px;
+    padding-bottom: 10px;
+    h3 {
+        font-weight: 100;
+        font-family: 'Open Sans' Helvetica, san-serif;
+    }
+}
+
+.media-overlay {
+    position: relative;
+    clear: both;
+    float: right;
+    background-color: rgba(255, 255, 255, .85);
+    max-width: 475px;
+    padding: 45px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    min-height: 415px;
+}
+
+.home-cust-playhead {
+    float: left;
+    z-index: 2; 
+    top: 35%;
+    left: 38%;
+    position: absolute;
+    width: 125px;
+    border-radius: 50%;
+    &:hover {
+         width: 125px;
+        @include transition (all 400ms ease);
+        cursor: pointer;
+        -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        border-radius: 50%;
+
+    }
+}
+
+.media-left-wrap {
+    padding: 0px;
+}
+
+.media-right-wrap {
+    padding: 0px;
+}
+
+.media-left {
+    @include customer-background-left-en;
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    height: 350px;
+    border-top: 4px solid white;
+    border-right: 2px solid white;
+}
+
+.media-right {
+    @include customer-background-right-en;
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    height: 350px;
+    border-top: 4px solid white;
+    border-left: 2px solid white;
+}
+
+.media-description {
+    padding-top: 35px;
+    padding-left: 65px;
+    padding-bottom: 35px;
+    img {
+        padding-bottom: 20px;
+    }
+}
+
+.bordered {
+    border-right: 2px solid #f6f6f6;
+}
+
+@media only screen and (max-width: 992px) {
+    .media-full-width {
+        height: 200px;
+    }
+    .media-right {
+        border: none;
+        height: 200px;
+    }
+    .media-left {
+        border: none;
+        height: 200px;
+    }
+    .media-description {
+        display: none;
+    }
+    .media-title {
+        display: none;
+    }
+    .media-overlay {
+        display: none;
+    }
+    .home-cust-playhead {
+        float: left;
+        z-index: 8;
+        top: 30%;
+        left: 42%;
+        position: absolute;
+    }
+}
+
+@mixin media-story-en {
+    background-image: url(http://www.dynatrace.com/content/dam/dynatrace/misc/Homepage-Assets/mcgraw-hill-bg.jpg);
+}
+
+//Customer Story Styles
+.media-full-width-story {
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    height: 380px;
+    padding: 0px;
+}
+
+.media-title {
+    position: relative;
+    clear: both;
+    float: right;
+    background-color: #73b200;
+    color: white;
+    min-width: 475px;
+    padding-left: 45px;
+    padding-bottom: 10px;
+    h3 {
+        font-weight: 100;
+        font-family: 'Open Sans' Helvetica, san-serif;
+    }
+}
+
+.media-overlay-story {
+    position: relative;
+    clear: both;
+    float: right;
+    background-color: rgba(255, 255, 255, .90);
+    max-width: 475px;
+    padding: 45px;
+    padding-top: 55px;
+    padding-bottom: 75px;
+    min-height: 380px;
+}
+
+@media(max-width:768px) {
+    .media-overlay-story {
+        padding-bottom: 0px;
+        height: 100%;
+    }
+} 
+
+.cust-story-playhead {
+    float: left;
+    z-index: 8;
+    top: 35%;
+    left: 40%;
+    position: absolute;
+    width: 125px;
+    border-radius: 50%;
+    &:hover {
+        width: 125px;
+        @include transition (all 400ms ease);
+        cursor: pointer;
+        -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        border-radius: 50%;
+
+    }
+}
+
+.story-side-item {
+    color: white;
+    margin-left: 80px;
+    padding-bottom: 25px;
+}
+
+.product-used-title {
+    margin-left: 80px;
+    color: white;
+    padding-bottom: 15px;
+}
+
+.story-product {
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 80px;
+    margin-bottom: 10px;
+    &:hover {
+        background-color: lighten(#404042, 5%);
+        @include transition (all 300ms ease);
+    }
+    a {
+        display: inline;
+        color: white;
+        text-decoration: none;
+    }
+    img {
+        display: inline-block;
+        float: right;
+        height: 35px;
+        margin-top: -45px;
+        padding-right: 20px;
+        padding-left: 30px;
+    }
+}
+
+.story-button-wrap {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 55px;
+    text-align: center;
+}
+
+.customer-story-titles {
+    font-size: 22pt;
+    padding-bottom: 10px;
+}
+
+.customer-callout-wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+}
+
+.customer-callout-quote {
+    font-size: 25pt;
+    font-weight: 100;
+    line-height: 1.75;
+    color: $apm-green;
+}
+
+.story-content {
+    max-width: 960px;
+}
+
+//start sidebar styles
+#wrapper {
+    clear: both;
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 450px;
+}
+
+#sidebar-wrapper {
+    z-index: 5;
+    position: absolute;
+    left: 450px;
+    width: 0;
+    height: 100%;
+    margin-left: -450px;
+    overflow-y: auto;
+    background-color: #404042;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding-bottom: 5000px;
+    margin-bottom: -5000px;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    //position: absolute;
+    padding: 15px;
+    line-height: 1.75;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    //position: absolute;
+    margin-right: -250px;
+}
+
+//Sidebar Styles
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 370px;
+    }
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+    #sidebar-wrapper {
+        width: 300px;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+@media(max-width:480px) {
+    .customer-callout-quote {
+        font-size: 18pt;
+        font-weight: 100;
+        line-height: 1.75;
+    }
+}
+
+//additonal styles for Customer Page
+.ft-cust-name {
+    font-size: 16pt;
+    margin-bottom: 5px;
+}
+
+.img-border {
+    border: 2px solid #dddddd;
+}
+
+.cust-btn-group {
+    margin-top: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    .split-button {
+        width: 150px;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: inline-block;
+        font-weight: 200;
+    }
+}
+
+.ft-cust-bio {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.cust-test-wrap {
+    margin-bottom: 45px;
+}
+
+.cust-test-img {
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.cust-test-name {
+    background-color: #1d1c1c;
+    min-height: 80px;
+    p {
+        color: white;
+        text-align: center;
+        padding-top: 22px;
+        font-size: 18pt;
+    }
+}
+
+.cust-test-view-more {
+    background-color: #137ea8;
+    min-height: 50px;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: -10px;
+    a {
+        color: white;
+        &:hover {
+            opacity: .75;
+            @include transition (all 300ms ease);
+            text-decoration: none;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .ft-cust-bio {
+        text-align: center;
+    }
+}
+
+
+
+//fixes playhead position on mobile
+
+@media screen and (max-width: 1024px){
+
+.home-cust-playhead {
+    float: left;
+    z-index: 8;
+    top: 30%;
+    left: 46%;
+    position: absolute;
+    width: 75px;
+    border-radius: 50%;
+    &:hover {
+         width: 75px;
+        @include transition (all 400ms ease);
+        cursor: pointer;
+        -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        border-radius: 50%;
+
+    }
+}
+
+
+}
+
+
+
+

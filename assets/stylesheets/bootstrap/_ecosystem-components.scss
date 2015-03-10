@@ -1,0 +1,251 @@
+//intro container
+
+.eco-hero-wrap{
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.eco-hero-block {
+    min-height: 540px;
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+    h1 {
+        font-size: 55px;
+        padding-bottom: 10px;
+    }
+    a {
+        color: white;
+    }
+}
+
+
+
+//eco intro styles
+.eco-intro-wrap {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.eco-intro-logo {
+    padding-bottom: 50px;
+}
+
+.eco-intro-desc {
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+//eco video styles
+.eco-video-wrap {
+    height: 400px;
+    background-color: $apm-blue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-top: 1px solid #d1d1d1;
+}
+
+.eco-vid-playhead{ 
+    z-index: 3;
+    height: 75px;
+    width: 75px;
+    margin: auto;
+    position: absolute;
+    border-radius: 50%;
+    top: 0; left: 0; bottom: 0; right: 0;
+    &:hover {
+         width: 75px;
+        @include transition (all 400ms ease);
+        cursor: pointer;
+        -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        border-radius: 50%;
+    }
+}
+
+
+//eco quote styles
+.eco-wrap-right {
+    max-width: 580px;
+    padding-left: 50px;
+}
+
+.eco-quote-wrap {
+    
+    height: 400px;
+    background-color: $top-block;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    span {
+        font-size: 18px;
+    }
+}
+
+.eco-quote {
+    font-size: 24px;
+    font-weight: 100;
+    padding-bottom: 40px;
+}
+
+//blue sub callout
+
+.eco-sub-callout {
+    background-color: $apm-blue;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 25px;
+    .sub-callout {
+        font-size: 18px;
+    }
+}
+
+
+//h2 titles
+.eco-title-intro {
+    text-align: center;
+    font-weight: 100;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    letter-spacing: 3px;
+    h2{
+    font-size: 26px;
+}}
+
+
+//screenshot styles
+.eco-getting-started{
+text-align: center;
+}
+
+.eco-ss {
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 12px;
+    line-height: 1.5;
+    img {
+        border: 1px solid #d1d1d1;
+        margin-bottom: 15px;
+    }
+    p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+
+//Download List
+#open-downloads{
+display: none;
+}
+
+#show-downloads:hover{
+color: $apm-blue;
+@include transition (all 300ms ease);
+    cursor: pointer;
+}
+
+
+.eco-dl-item {
+    text-align: center;
+    margin-bottom:50px;
+    a {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    img {
+        margin-bottom: 20px;
+        border: 1px solid #d1d1d1;
+        &:hover{
+          opacity: .75;
+          @include transition (all 300ms ease);
+        }
+    }
+}
+
+
+#eco-download:hover{
+color: $apm-blue;
+@include transition (all 300ms ease);
+}
+
+
+//Related Links styles
+
+.eco-related-links{
+margin-bottom: 75px;
+}
+
+
+.related-link-item{
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+  height: 163px;
+    p{
+    padding-top: 15px;
+    }
+}
+
+
+.eco-vid-related-playhead{ 
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    position: absolute;
+    border-radius: 50%;
+    top: 0; left: 0; bottom: 0; right: 0;
+    &:hover {
+         width: 50px;
+        @include transition (all 300ms ease);
+        cursor: pointer;
+        -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        border-radius: 50%;
+    }
+}
+
+
+
+//eco button groups
+
+.eco-download-buttons{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.eco-button{
+font-weight: 100;
+}
+
+
+//Media Queries for typography
+@media(max-width:480px) {
+    .eco-quote {
+        font-size: 20px;
+        font-weight: 100;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    .eco-wrap-right {
+        padding-left: 0px;
+    }
+    .eco-button {
+        display: block;
+    }
+}
+
+
+.active-open{
+-ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+
+}

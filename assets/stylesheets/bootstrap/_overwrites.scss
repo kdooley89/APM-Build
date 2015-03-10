@@ -4,14 +4,24 @@
 //md: 992px
 //lg: 1200px
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 
+//animates all elements on resize
+/**{
+    -webkit-transition:all 500ms ease;
+         -moz-transition:all 500ms ease;
+               -o-transition:all 500ms ease;
+                     transition:all 500ms ease;
+}*/
+
+
+
+//Standards
 .img-center{
      margin-left:auto;
      margin-right:auto;
      display: block;
 }
-
+ 
 .breather{
     margin-top: 25px;
     margin-bottom: 25px;
@@ -19,6 +29,7 @@
     padding-bottom: 25px;
 }
 
+//mixins for spacing
 
 @mixin spacing{
   padding-top: 50px;
@@ -32,6 +43,9 @@
 
 
 
+
+
+//Defines default font family/Text Color/Responsive Images
 body{
   font-family: $font-family-sans-serif;
   color: $default-text;
@@ -41,491 +55,16 @@ body{
     height: auto;
     }
 }
+ 
 
 
 
 
 
-//Homepage Custom Styles
 
-.home-topblock{
-     background-image: url(/content/dam/dynatrace/misc/backgrounds/homepage_bg.jpg);
-     background-size: cover;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-      -o-background-size: cover;
-     background-repeat: no-repeat;
-     background-color: $top-block;
-    @include spacing;
-        .offset{
-          position: relative;
-          z-index: 2;
-          }
-            h1{
-                color: white;
-                @include med;
-                text-align: center;
-                margin-bottom: -10px;
-                font-size:4em;
-                }
-            h2{
-                color: $apm-blue;
-                @include thin;
-                text-align: center;
-                line-height: 1;
-                font-size: 2.4em;
-                letter-spacing: 6px;
-                }
 
-            p{
-                @include thin;
-                color: white;
-                font-size: 1.15em;
-                text-align: center;
-                margin-bottom: 50px;
-                padding-top: 15px;
-                padding-bottom: 15px;
-                }
-    .project-title{
-        font-size: 1.35em;
-    }
+//INTRO BACKGROUND CONTAINER-----------------------------------
 
-    hr{
-        width: 45%;
-        text-align: center;
-    }
-}
-
-.dynatrace-services{
-    padding: 0px;
-    box-shadow: 0px 0px 15px;
-        img{
-         width: 14.2%;
-        }
-    }
-
-
-//cyan   #2fae59  rgba(47,174,89,1)
-//green #3bbb64 rgba(48,153,176,1)
-//purple #8332a8 rgba(250,75,66,1)
-//yellow #bc9b3a rgba(145,65,182,1)
-
-
-//homepage img blocks
-.home-contain{
-    background-position: top center;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-     -o-background-size: cover;
-    background-repeat: no-repeat;
-    float: left;
-    padding: 0px;
-    text-align: center;
-
-}
-
-
-.cyan-contain{
-    background: rgba(47,174,89,.90);
-}
-
-.green-contain{
-    background: rgba(48,153,176,.90);
-}
-
-.purple-contain{
-    background: rgba(250,75,66,.90);
-}
-
-
-.yellow-contain{
-    background: rgba(145,65,182,.90);
-}
-
-
-
-
-.cyan{
-    background-image: url(/assets/img/Photo1.jpg);
-    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo1.jpg);
-    @extend .home-contain;
-}
-
-.cyan:hover{
-    background-image: url(/assets/img/Photo1-cyan.jpg);
-    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo1-cyan.jpg);
-    @include transition (all 300ms ease-in-out);
-}
-
-
-.green{
-    background-image: url(/assets/img/Photo2.jpg);
-    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo2.jpg);
-    @extend .home-contain;
-}
-.green:hover{
-    background-image: url(/assets/img/Photo2-green.jpg);
-    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo2-green.jpg);
-    @extend .home-contain;
-    @include transition (all 300ms ease-in-out);
-}
-
-
-.purple{
-    background-image: url(/assets/img/Photo3.jpg);
-    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo3.jpg);
-    @extend .home-contain;
-}
-
-.purple:hover{
-    background-image: url(/assets/img/Photo3-purple.jpg);
-    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo3-purple.jpg);
-    @extend .home-contain;
-    @include transition (all 300ms ease-in-out);
-}
-
-
-.yellow{
-    background-image: url(/assets/img/Photo4.jpg);
-    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo4.jpg);
-    @extend .home-contain;
-}
-
-.yellow:hover{
-    background-image: url(/assets/img/Photo4-yellow.jpg);
-    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo4-yellow.jpg);
-    @extend .home-contain;
-    @include transition (all 300ms ease-in-out);
-}
-
-
-
-@media(max-width:2560px) and (min-width:1200px){
-.cyan, .green, .purple, .yellow{
-    width: 25%; //275px
-    height: 33em; //490px
-    display: inline-block;
-    }
-
-  .home-topblock{
-    max-height: 750px;
-    }
-
-  .dyna-stats{
-    margin-top: 175px; //125px
-    }
-}
-
-@media(max-width:1200px) and (min-width:992px){
-.cyan, .green, .purple, .yellow{
-    width: 25%; //250px
-    height:28.75em;  //460px
-    display: inline-block;
-    }
-
-  .home-topblock{
-    max-height: 700px;
-    }
-
-  .dyna-stats{
-    margin-top: 143px;
-     }
-}
-
-@media(max-width: 992px) and (min-width:768px){
-.cyan, .green, .purple, .yellow{
-    width: 25%;
-    height: 23em;
-    display: inline-block;
-        p{
-        font-size: 80%;
-        }
-    }
-
-    .dyna-stats{
-        margin-top: 25px;
-    }
-}
-
-
-@media(max-width: 768px) and (min-width:557px){
-.cyan, .green, .purple, .yellow{
-    width: 50%;
-    height: 23em;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    }
-
-  .dyna-stats{
-    margin-top: 25px;
-    }
-}
-
-@media(max-width: 556px) and (min-width:300px){
-.cyan, .green, .purple, .yellow{
-    width: 50%;
-    height: 23em;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-bottom: 25px;
-    }
-
-    .dyna-stats{
-    margin-top: 25px;
-    }
-
-}
-
-
-
-.outer-wrap{
-    padding: 0px;
-}
-
-.init-overlay-wrap{
-    position: relative;
-    bottom: 0px;
-    left: 0px;
-}
-
-.init-overlay{
-    padding: 15px;
-    position: absolute;
-    background-color: rgba(0,0,0,.65);
-    width: 100%;
-    height: 135px;
-
-    a:hover{
-    text-decoration:none;
-    }
-
-    p{
-    font-weight: 100;
-    color: white;
-    font-size: 1em;
-    line-height: 1.5;
-    text-align: center;
-    margin-bottom: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    }
-}
-
-@media(max-width:2560px) and (min-width:1200px){
-.init-overlay-wrap{
-    position: relative;
-    bottom: -225px;
-    left: 0px;
-    }
-}
-
-
-@media(max-width:1200px) and (min-width:992px){
-    .init-overlay{
-        height: 150px;
-    }
-
-    .init-overlay-wrap{
-        position: relative;
-        bottom: -151px;
-        left: 0px;
-    }
-
-}
-
-@media(max-width: 992px) and (min-width:768px){
-    .init-overlay{
-        height: 147px;
-    }
-
-    .init-overlay-wrap{
-        position: relative;
-        bottom: -80px;
-        left: 0px;
-        p{
-            font-size: 80%;
-        }
-    }
-}
-
-
-
-@media(max-width: 768px) and (min-width:466px){
-   .init-overlay{
-       height: 110px;
-   }
-
-    .init-overlay-wrap{
-    position: relative;
-    bottom: -110px;
-    left: 0px;
-        p{
-        font-size: 80%;
-        }
-}
-}
-
-
-@media(max-width: 465px){
-
- .init-overlay{
-       height: auto;
-   }
-
-    .init-overlay-wrap{
-        position: relative;
-        bottom: -130px;
-        left: 0px;
-        p{
-            font-size: 80%;
-        }
-}
-
-.push{
-    position: relative;
-    bottom: -153px;
-    left: 0px;
-    }
-
-
-}
-
-
-
-
-
-
-//infographics Homepage
-
-.dyna-stats{
-h4{
-    text-align: center;
-    color: #7f7f7f;
-    margin-bottom: 45px;
-    }
-.social-stats{
-    text-align: center;
-    color: #7f7f7f;
-    }
-    hr{
-    color: $gray-lighter;
-    width: 90%;
-    border: 1px solid $gray-lighter;
-    }
-}
-
-
-.dyna-customers{
-    background: $body-section;
-    padding-bottom:50px;
-    padding-top: 50px;
-    width:100%;
-    a{
-    margin-top: 25px;
-    color: $link-grey;
-    }
-    img:hover{
-        opacity: .50;
-        @include transition(all 300ms ease);
-    }
-}
-
-
-.customer-width{
-    width: 14.285714286%;
-    display: inline;
-    text-align: center;
-}
-
-
-
-.apm-video{
-    background-image: url(/assets/img/video-contain.jpg);
-    background-image: url(/content/dam/dynatrace/misc/backgrounds/video-contain.jpg);
-    background-size: cover;
-    margin-bottom: 3em;
-    background-position: right;
-    background-repeat: no-repeat;
-    min-height: 250px;
-}
-
-.apm-video-player{
-    top: 50px;
-    text-align: center;
-}
-
-.apm-home-video{
-    overflow: visible;
-}
-
-.playhead:hover{
-    border-radius: 50%;
-    width:110px;
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
-    -moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.45);
-    box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.45);
-    @include transform (all 600ms ease-in-out);
-    }
-
-//youtube embed video overwrites
-.modal.fade .modal-dialog {
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-     -moz-transition: -moz-transform 0.3s ease-out;
-       -o-transition: -o-transform 0.3s ease-out;
-          transition: transform 0.3s ease-out;
-}
-
-.modal.in .modal-dialog {
-}
-
-
-.news{
-    padding-top: 25px;
-    padding-bottom: 50px;
-    a{
-      color: #222222;
-    }
-    .benchmarks,.news-cont,.events,.freemiums{
-      margin-bottom:50px;
-    }
-    hr{
-      color: #cacbcd;
-      border: 1px solid #cacbcd;
-      width: 60px;
-      text-align: center;
-    }
-    p{
-      padding-left: 25px;
-      padding-right: 25px;
-    }
-    img:hover{
-        opacity: .75;
-        @include transition (all 300ms ease);
-    }
-}
-
-
-.bottom-color-blue{
-  height: 5px;
-  background-color: $apm-blue;
-}
-
-.bottom-color-red{
-  height: 5px;
-  background-color: $apm-red;
-}
-
-.bottom-color-green{
-  height: 5px;
-  background-color: $apm-green;
-}
-
-
-
-//INTRO BACKGROUND CONTAINER
 .intro{
     min-height: 500px;
     background-size:cover;
@@ -709,6 +248,7 @@ p span.spacer{
 
 
 //CUSTOM INTRO CONTAINERS-----------------------------------
+
 .products-intro{
     @extend .intro;
     background-image: url(/assets/img/products-apm-bg.png);
@@ -780,6 +320,13 @@ p span.spacer{
     @extend .intro;
     background-image: url(/assets/img/uxmang-bg.jpg);
 }
+
+
+
+
+
+
+
 //QUARTER BACKGROUNDS START--------------------------------------
 
 .init-intro{
@@ -820,180 +367,6 @@ p span.spacer{
 }
 
 
-//default-button overwrites----------------------------------
-.default-button{
-  font-family: $font-family-sans-serif;
-  @include thin;
-  font-size: 1em;
-  letter-spacing: 1px;
-  background-color: $apm-blue;
-  color: lighten( #222222, 80% );
-  text-align: center;
-  text-transform: uppercase;
-  padding-left:30px;
-  padding-right:30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  outline: none;
-  border: none;
-  border-radius:3px;
-  margin:10px;
-  display: inline;
-  cursor: pointer;
-}
-
-.default-button:hover{
-  background-color: darken($apm-blue, 10%);
-  color: white;
-    text-decoration:none;
-  @include transition (all 300ms ease-in-out);
-  & :focus{
-    top:2px;
-    right:2px;
-  }
-
-}
-
-
-.apm-red-button{
-  font-family: $font-family-sans-serif;
-  @include thin;
-  font-size: 1em;
-  letter-spacing: 1px;
-  background-color: $apm-red;
-  color: lighten( #222222, 80% );
-  text-align: center;
-  text-transform: uppercase;
-  padding-left:30px;
-  padding-right:30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  outline: none;
-  border: none;
-  border-radius:3px;
-  margin:10px;
-  display: inline;
-  cursor: pointer;
-}
-
-.apm-red-button:hover{
-  background-color: darken($apm-red, 10%);
-  color: white;
-    text-decoration:none;
-  @include transition (all 300ms ease-in-out);
-  & :focus{
-    top:2px;
-    right:2px;
-  }
-
-}
-
- //brand-secondary button --------------------------------
-.secondary-button{
-  font-family: $font-family-sans-serif;
-  font-weight: 600;
-  font-size: 1em;
-  letter-spacing: 1px;
-  background-color: $apm-green;
-  color: lighten( #222222, 80% );
-  text-align: center;
-  text-transform: uppercase;
-  padding-left:30px;
-  padding-right:30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  outline: none;
-  border: none;
-  border-radius:3px;
-  margin:10px;
-  display: inline;
-  cursor: pointer;
-}
-
-.secondary-button:hover{
-  background-color: darken( $apm-green, 10%);
-  @include transition (all 300ms ease-in-out);
-    color: white;
-    text-decoration: none;
-    & :focus{
-        top:2px;
-        right:2px;
-      }
-
-}
-
-
-//full width button ----------------------------------
-.full-button{
-  margin:10px;
-  padding-left:30px;
-  padding-right:30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-family: $font-family-sans-serif;
-  @include thin;
-  font-size: 1em;
-  letter-spacing: 1px;
-  background-color: $apm-blue;
-  color: lighten( #222222, 80% );
-  text-align: center;
-  text-transform: uppercase;
-  outline: none;
-  border: none;
-  border-radius:3px;
-  display: block;
-  cursor: pointer;
-}
-
-.full-button:hover{
-  background-color: darken($apm-blue, 10%);
-  @include transition (all 300ms ease-in-out);
-    color: white;
-    text-decoration: none;
-    & :focus{
-        top:2px;
-        right:2px;
-        color: white;
-      }
-
-}
-
-//ghost button styles --------------------------------
-.ghost-button{
-  font-family: $font-family-sans-serif;
-  @include med;
-  font-size: 1.3em;
-  letter-spacing: 1px;
-  background-color: transparent;
-  color: $apm-blue;
-  text-align: center;
-  text-transform: uppercase;
-  padding-left:30px;
-  padding-right:30px;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  outline: none;
-  border: 3px solid $apm-blue;
-  border-radius:5px;
-  margin-top:5px;
-  margin-bottom: 5px;
-  ftcursor: pointer;
-
-}
-
-.ghost-button:hover{
-  background-color: $apm-blue;
-    color: white;
-    text-decoration: none;
-  @include transition (all 300ms ease-in-out);
-  & :focus{
-    top:2px;
-    right:2px;
-  }
-
-}
-
-
 
 
 //Products Page Overwrites----------------------------------
@@ -1015,10 +388,12 @@ p span.spacer{
     @include thin;
     font-size: .75em;
     margin-bottom: 0px;
-    text-align: right;
+    display:inline;
     }
   a{
     color: white;
+    float: right;
+    padding-right:15px;
    }
 }
 
@@ -1032,7 +407,7 @@ p span.spacer{
 
 
 .ft-one,.ft-two,.ft-three,.ft-four,.ft-five,.ft-six,.ft-seven,.ft-eight,.ft-nine{
-    height: 175px;
+    height: 200px;
     border:1px solid white;
     border-radius: 3px;
     padding: 15px;
@@ -1104,6 +479,7 @@ p span.spacer{
 
 
 //testimony --------------------------------------------------
+
 .testimony{
     background-image: url(/content/dam/dynatrace/misc/backgrounds/Quote_Image.png);
     background-size: cover;
@@ -1159,8 +535,6 @@ p span.spacer{
 //environmnet tabs -----------------------------------------
 .environment-tabs{
     @include xtra-space;}
-
-//tabs ------------------------------------------------
 
 
 .tab-wrap{
@@ -1392,10 +766,6 @@ padding-left:50px;
 
 
 
-//dynaTrace Saas ------------------------------------------
-
-
-
 
 //APM SUPPORT PRE FOOTER CONTAINER ------------------------------------------
 .apm-pre-footer{
@@ -1470,6 +840,7 @@ padding-left:50px;
 
 
 //APM-PROD DEV TEST CONTAINER------------------------------------
+
 .devops-wrap{
     padding: 0px;
 }
@@ -1809,10 +1180,41 @@ font-size: 1.25em;
 }
 
 
+.redoute{
+  background-image:url(/content/dam/dynatrace/misc/fr_customers/laredoute_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.dila{
+  background-image:url(/content/dam/dynatrace/misc/fr_customers/dila_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ticket{
+  background-image:url(/content/dam/dynatrace/misc/fr_customers/ticker_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+.swarovski{
+      background-image:url(/content/dam/dynatrace/misc/backgrounds/swarovski-bg.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+}
+
+.swisscom{
+      background-image:url(/content/dam/dynatrace/misc/backgrounds/swisscom-bg.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+}
+
 
 
 @media (max-width:769px){
-
 .slider-inner p{
 font-size: 95%;
  }
@@ -2030,40 +1432,45 @@ text-align: center;
 
 .usa{
     @include location-bg;
-    background-image: url(/content/dam/dynatrace/misc/backgrounds/us-bg.png);
+    background-image: url(/content/dam/dynatrace/misc/backgrounds/us-bg.jpg);
     &:hover{
-    background-image: url(/content/dam/dynatrace/misc/backgrounds/us-bg-overlay.png);
+    background-image: url(/content/dam/dynatrace/misc/backgrounds/us-bg-overlay.jpg);
     }
 }
 
 .eu{
     @include location-bg;
-    background-image: url(/content/dam/dynatrace/misc/backgrounds/eu-bg.png);
+    background-image: url(/content/dam/dynatrace/misc/backgrounds/eu-bg.jpg);
     &:hover{
-    background-image: url(/content/dam/dynatrace/misc/backgrounds/eu-bg-overlay.png);
+    background-image: url(/content/dam/dynatrace/misc/backgrounds/eu-bg-overlay.jpg);
     }
 
 }
 
 .apc{
     @include location-bg;
-    background-image: url(/content/dam/dynatrace/misc/backgrounds/asia-pc-bg.png);
+    background-image: url(/content/dam/dynatrace/misc/backgrounds/asia-pc-bg.jpg);
     &:hover{
-    background-image: url(/content/dam/dynatrace/misc/backgrounds/asia-pc-bg-overlay.png);
+    background-image: url(/content/dam/dynatrace/misc/backgrounds/asia-pc-bg-overlay.jpg);
     }
 
 }
 
 .la{
     @include location-bg;
-    background-image: url(/content/dam/dynatrace/misc/backgrounds/latin-am-bg.png);
+    background-image: url(/content/dam/dynatrace/misc/backgrounds/latin-am-bg.jpg);
     &:hover{
-    background-image: url(/content/dam/dynatrace/misc/backgrounds/latin-am-bg-overlay.png);
+    background-image: url(/content/dam/dynatrace/misc/backgrounds/latin-am-bg-overlay.jpg);
     }
 }
 
 
+
+
+
+
 //community ------------------------------------------
+
 .community-wrap{
     @include spacing;
     text-align: center;
@@ -2102,14 +1509,15 @@ background: $body-section;
 }
 
 // Initiatives-Overview --------------------------------------------------
+
 .init-bg{
     background-position: center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
       -o-background-size: cover;
-    background-attachment: fixed;
-    min-height: 200px;
+    //background-attachment: fixed;
+    min-height: 200px; 
     padding: 20px;
     padding-top: 60px;
 }
@@ -2127,6 +1535,7 @@ background: $body-section;
 
 
 /* iPads (portrait and landscape) -----------  */
+
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
@@ -2163,6 +1572,7 @@ background-attachment: scroll;
     text-align: center;
     margin-left:auto;
     margin-right: auto;
+    margin-left:-15px;
     h1 span{
         font-size: 1.4em;
     }
@@ -2292,6 +1702,7 @@ margin-top:70px;
 
 
 //about us careers----------------------------
+
 .why-us-img{
     margin-top: 35px;
     @include img-center;
@@ -2353,6 +1764,7 @@ margin-top:70px;
 
 
 //Partners program----------------------------------
+
 .accel-intro{
     margin-top: 25px;
 }
@@ -2409,6 +1821,7 @@ margin-top: 25px;
 
 
 //quote slider styles ------------------------------------------
+
 .img-round{
   border-radius:50%;
 }
@@ -2556,6 +1969,7 @@ tbody tr:nth-child(odd) {
 
 
 //PLUGINS --------------------------------------------------
+
 .wrapper{
     padding-top: 50px;
     padding-bottom: 50px;
@@ -2814,7 +2228,7 @@ font-size: 16px;
 }
 
 
-//Automated Events Layout
+//Automated Events Layout-----------------------------------
 
 .event-standards{
 padding-left: 100px;
@@ -2831,6 +2245,9 @@ border-right: 2px solid #f6f6f6;
     }
      ._item{
     margin-bottom: 75px;
+    padding-top:50px;
+    padding-bottom:50px;
+    border-bottom: 2px solid #f6f6f6;
     }
 
     .events-top-title{
@@ -2871,10 +2288,11 @@ border-right: 2px solid #f6f6f6;
     padding-right: 25px;
     border: none;
     .event_name{
-    border: none;
+      border: none;
     }
 }
 }
+
 
 
 
@@ -2908,11 +2326,7 @@ margin-bottom:50px;
 }
 
 
-
-
-
-
-//MOBILE MENU OVERWRITES
+//MOBILE MENU OVERWRITES-----------------------------------
 
 @media(max-width:480px){
     .flex-container{
@@ -2928,4 +2342,873 @@ margin-bottom:50px;
     width: auto;
     max-height: auto;
     height: auto;
+}
+
+
+
+//Renaming of Product Identities-----------------------------------
+
+
+.rg_header{
+  padding-top:50px;
+}
+
+.rg_intro{
+  border-bottom: 2px solid #222222;
+  text-align:center;
+  padding-bottom:10px;
+  font-weight:400;
+  padding:10px;
+}
+
+
+.rg_outer{
+  margin-top:30px;
+  border:2px solid #eeeeee;
+  padding:0px;
+}
+
+.rg_header_wrap{
+  background: #eeeeee;
+  .rg_header_inner{
+    padding:15px;
+    padding-top:20px;
+    font-weight:700;
+  }
+
+}
+
+
+//start list row styles
+
+.rg_list_row{
+  padding-top:10px;
+  padding-bottom:10px;
+   .rg_list_item{
+     padding-top:15px;
+     padding-bottom:15px;
+     font-weight:400;
+     .new_name{
+       color: $apm-blue;
+       font-weight:400;
+       font-size:14px;
+     }
+   }
+}
+
+.prefix-name{
+  display:none;
+}
+
+
+@media only screen and (max-width : 768px) {
+.row:nth-of-type(even){
+  //background: #eeeeee;
+}
+  .prefix-name{
+    display:block;
+    font-weight:700;
+
+  }
+
+  .rg_list_row .rg_list_item {
+    padding-bottom: 0;
+   }
+
+
+}
+
+
+@media only screen and (max-width: 974px) {
+  .rg_outer {
+    border:none;
+  }
+}
+
+
+
+
+//Starts Event's & news styles-----------------------------------
+
+.events-wrapper{
+  background-color: #404042;
+  min-height:100%;
+  width:100%;
+  position:absolute;
+}
+
+.sidenav{
+  height:100%;
+  background-color: #404042;
+  @include transition(display 300ms ease);
+}
+
+
+
+
+.navmenu{
+  padding-top: 25px;
+}
+
+
+
+
+.sidenav_inner{
+  li{
+    line-height:3;
+    list-style-type:none;
+    color: #828282;
+    padding-top:5px;
+    padding-bottom:5px;
+    a{
+      color: lighten(#404042, 45%);
+      padding-left:15px;
+      height:15px;
+      &:hover{
+        color: white;
+        font-weight:bold;
+        height:20px;
+        border-left: 4px solid $apm-blue;
+        @include transition(border 300ms ease);
+        text-decoration: none;
+      }
+    }
+    .active-sidenav{
+      //font-size:1.2em;
+      color: white;
+      font-weight:bold;
+      border-left: 4px solid $apm-blue;
+    }
+  }
+}
+
+
+//start content styling
+.contentRight{
+  background-color: white;
+  padding-top:25px;
+  padding-left:80px;
+  padding-right:10%;
+  max-width:100%;
+  .content_inner{
+    max-width:960px;
+    padding-top:15px;
+  }
+  h4{
+    color:#9e9e9f;
+    letter-spacing:1px;
+
+  }
+
+}
+
+
+.featuredEvent{
+  //background: #222222;
+  padding:35px;
+  color:white;
+  min-height:280px;
+  p{
+    padding-top:20px;
+  }
+  .eventDate{
+    color:#828282;
+  }
+  .eventBody{
+    width:75%;
+  }
+}
+
+
+.featured_block_nc{
+  background-image: url(/content/dam/dynatrace/misc/backgrounds/search_network_bg.png);
+  background-position: center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.featured_block_pr{
+  background-image: url(/content/dam/dynatrace/misc/backgrounds/pr_ft_bg.png);
+  background-position: center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.item-roll{
+  padding-top:45px;
+  padding-bottom:45px;
+  border-bottom:2px solid #eeeeee;
+  img:hover{
+    opacity:.75; 
+    @include transition(all 300ms ease);
+  }
+}
+
+item_img{
+  border: 2px solid #eeeeee;
+}
+
+item-roll:nth-of-type{
+  border-bottom:none;
+}
+
+.item_desc{
+  .eventTitle{
+    font-size:1.3em;
+    font-weight: 800;
+    color:#2b2b2b;
+  }
+  .eventDate{
+    color:#828282;
+  }
+  .upcoming_event span{
+    color:#80BD01;
+  }
+  .ondemand_event span{
+    color:#0090B6;
+  }
+
+}
+
+
+ /*@media only screen and (min-width: 768px){
+  .events-menu{
+    display:none;
+  }
+
+}*/
+
+@media only screen and (max-width: 992px){
+  .sidenav{
+    font-size:85%;
+    padding-left:0px;
+  }
+  .sidenav_inner{
+    padding:5px;
+  }
+}
+
+
+@media only screen and (max-width: 768px){
+  .events-menu{
+    display:block;
+    padding-left:25px;
+    padding-top:20px;
+    padding-bottom:10px;
+    background: #3c3d41;
+    color:white;
+    font-size:1.2em;
+  }
+
+  .sidenav{
+    //display:none;
+    height:auto;
+    li:hover{
+      background-color: $apm-blue;
+      @include transition(all 300ms ease);
+      a{
+        color:white;
+        border-left:none;
+        font-weight:normal;
+      }
+    }
+  }
+
+  .contentRight{
+    width:100%;
+    padding-left:15px;
+    padding-right:15px;
+  }
+}
+
+
+.dynatraceNews{
+  display:none;
+  width:100%;
+  bottom: 0px;
+  z-index:50;
+  color:white;
+  position:fixed;
+  background: rgba(0,0,0,.45);
+  text-align: center;
+  min-height:75px;
+}
+
+
+
+.fileType{
+  padding-top:10px;
+  text-align:center;
+  color:$apm-blue;
+  a{
+    color:$apm-blue;
+  }
+}
+
+.mr_inner{
+  padding-top:15px;
+  margin-bottom:25px;
+
+}
+
+.mr_container{
+  padding-top:25px;
+}
+
+.exec-pic{
+  color:grey;
+  text-align:center;
+  font-weight:300;
+  letter-spacing:1px;
+  font-size:.8em;
+  height:25px;
+  overflow:visible;
+}
+
+.guidelines-intro{
+  color:grey;
+  font-size:12pt;
+  font-weight:400;
+  padding-top:15px;
+}
+
+
+
+//Press Release Style
+
+.pressRelease_title{
+  font-size:20px;
+  color: #222222;
+  font-weight:400;
+  a{
+    color:#222222;
+    font-weight:500;
+    &:hover{
+      color: $apm-blue;
+      text-decoration:none;
+    }
+  }
+}
+
+.press_source{
+  font-style: italic;
+  color: #828282;
+  font-weight: 200;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+
+
+
+
+
+.mc_topBar{
+  color:white;
+  background:$apm-blue;
+  text-align:center;
+  width:100%;
+  h3{
+    font-size:1.5em;
+    font-weight:300;
+    padding-bottom:10px;
+  }
+}
+
+
+.mc_outerWrap{
+  width:100%;
+  border-right: 2px solid #eeeeee;
+  border-left: 2px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
+  padding-top:25px;
+  padding-bottom:50px;
+  padding-left:25px;
+  padding-right:25px;
+}
+
+.outside_mc{
+  padding-bottom:25px;
+}
+
+
+.mc_contactItem{
+  padding-bottom:25px;
+}
+
+
+
+
+//press releases inner page
+.release_outer{
+  p{
+    line-height: 1.7;
+  }
+
+  a{
+    color:$apm-blue;
+    text-decoration:underline;
+  }
+}
+
+
+.releaseul{
+  line-height:1.7;
+  li{
+    margin-bottom: 1em;
+  }
+}
+
+
+.pr_header{
+  text-align: center;
+  font-weight: 200;
+  font-size: 3.5em;
+  color: #2b2b2e;
+  letter-spacing: 4px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-attachment: fixed;
+  background-size: inherit;
+}
+
+
+
+.socialWrap{
+  border: 1px solid #7f7f7f;
+  height:auto;
+  width:100%;
+  margin-top:20px;
+  text-align:center;
+  a{
+    text-decoration: none;
+  }
+  .share{
+    color:#d64649;
+    display:block;
+    padding-top:15px;
+    padding-bottom:15px;
+    &:hover{
+      opacity: .70;
+      @include transition (all 300ms ease);
+    }
+  }
+}
+
+
+.subRelease{
+  color: #2b2b2e;
+  font-size:1.1em;
+}
+
+.tweetThis:before{
+  font-family: FontAwesome;
+  content: "\f099";
+  font-size:22pt;
+  color:#137ea8;
+  float:left;
+  padding-right:15px;
+}
+
+.tweetThis{
+  padding-top:20px;
+  padding-bottom:20px
+}
+
+.press_inner{
+  margin-top:50px;
+}
+.mc_item{
+  padding-bottom:25px;
+}
+
+.fontGrey{
+  color:#747475
+}
+
+
+
+
+
+
+
+//Leadership Page
+
+
+
+  //sets mixin for style
+  @mixin bio-bg{
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    padding:0px;
+    height:400px;
+  }
+
+  .bio{
+    padding:30px;
+
+  }
+
+
+  .bio-jvs{
+    background-image:url(/content/dam/dynatrace/misc/About-Us-Executives/jvs-headshot.jpg);
+    @include bio-bg;
+  }
+
+
+  .bio-nr{
+    background-image:url(/content/dam/dynatrace/misc/About-Us-Executives/nr-headshot.jpg);
+    @include bio-bg;
+  }
+
+
+  .bio-ah{
+    background-image:url(/content/dam/dynatrace/misc/About-Us-Executives/ah-headshot.jpg);
+    @include bio-bg;
+  }
+
+
+  .bio-st{
+    @include bio-bg;
+  background-image:url(/content/dam/dynatrace/misc/About-Us-Executives/st-headshot.jpg);
+  }
+
+  .bio-bg{@include bio-bg;
+  @include bio-bg;
+  background-image:url(/content/dam/dynatrace/misc/About-Us-Executives/bg-headshot.jpg);}
+
+
+  .bio-ef{
+    @include bio-bg;
+  @include bio-bg;
+  background-image:url(/content/dam/dynatrace/misc/About-Us-Executives/af-headshot.jpg);
+  }
+
+  .bio-la{
+    @include bio-bg;
+  @include bio-bg;
+  background-image:url(/content/dam/dynatrace/misc/About-Us-Executives/la-headshot.jpg);
+  }
+
+  .bio-jr{
+    @include bio-bg;
+  @include bio-bg;
+  background-image:url(/content/dam/dynatrace/misc/About-Us-Executives/jr-headshot.jpg);}
+
+
+.bio-th{
+    @include bio-bg;
+  @include bio-bg;
+  background-image:url(/content/dam/dynatrace/misc/About-Us-Executives/th-headshot.jpg);}
+
+.bio-df{
+    @include bio-bg;
+  @include bio-bg;
+  background-image:url(/content/dam/dynatrace/misc/About-Us-Executives/df-headshot.jpg);}
+
+.bio-ks{
+ @include bio-bg;
+  @include bio-bg;
+  background-image:url(/content/dam/dynatrace/misc/About-Us-Executives/ks-headshot.jpg);
+} 
+
+
+
+  //bio inner
+
+.bio-top:nth-of-type(even) {
+background-color:white;
+}
+
+
+
+
+  .bio-overlay{
+    background: #2b2b2e;
+    bottom:0;
+    position:absolute;
+    height:100px;
+    width:100%;
+    color:white;
+    padding-left:15px;
+    p{
+      font-size:.9em;
+      color:#ababac;
+    }
+    .view-more{
+      bottom:0;
+      right:0;
+      position:absolute;
+      background:#d5d5d5;
+      padding-right:10px;
+      padding-left:10px;
+      padding-top:5px;
+      text-decoration: none;
+      a{
+      color:#2b2b2e;
+      &:hover{
+        color:#137ea8;
+        @include transition (all 300ms ease);
+        text-decoration: none;
+      }
+    }
+
+
+    }
+  }
+
+
+  .download-bio{
+    border-left:1px solid white;
+    border-bottom: 1px solid white;
+    top:0;
+    right:0;
+    position:absolute;
+    color:white;
+    padding-top:5px;
+    padding-left:5px;
+    padding-right:5px;
+    width:125px;
+    a{
+      color:white;
+      &:hover{
+        color:#137ea8;
+        @include transition (all 300ms ease);
+        text-decoration: none;
+      }
+    }
+  }
+
+
+
+  .bio-name{
+    border-right: 2px solid #959596;
+    display:inline-block;
+    padding-right:25px;
+  }
+
+  .bio-social{
+    display:inline;
+    font-size:3em;
+    padding-left:25px;
+    img{
+    margin-top:-20px;
+        &:hover{
+        opacity: .5;
+        @include transition (all 600ms ease);
+        }
+    }
+    }
+
+
+  .bio-body{
+    padding-top:20px;
+    font-weight:200;
+  }
+
+
+  .leadership_Bios{
+    padding-top:25px;
+    font-weight:100;
+     display:none;
+  }
+
+
+  .bio-pic img{
+    border-radius:190px;
+    border:5px solid #d5d5d5;
+    width: 190px;
+  }
+
+
+
+    .close{
+      p{ a{
+      float:right;
+      font-size:14px;
+        border: 1px solid #0090b6;
+        padding:10px;
+        color:#0090b6;
+         &:hover{
+        color:white;
+        background:#0090b6;
+        @include transition (all 300ms ease);
+           text-decoration: none;}
+      }
+      }
+    }
+
+
+
+
+@media(max-width: 992px){
+
+.leadership_Bios{
+display: block;
+padding-top:35px;
+border-bottom: 2px solid #eeeeee;
+}
+
+.bio-jvs,.bio-bg,.bio-st,.bio-nr,.bio-ah,.bio-ef,.bio-la,.bio-jr,.bio-df,.bio-th,.bio-ks{
+display:none;
+}
+
+
+.bio-pic img{
+    margin-bottom: 25px;
+}
+.close{
+    display: none;
+}
+
+.bio{
+    padding: 5px 0px 5px 0px;
+}
+
+
+.bio-body {
+    padding-top: 20px;
+    font-weight: 200;
+    padding-bottom: 30px;
+}
+
+
+}
+
+
+
+
+//HOMEPAGE TICKER
+
+.ticker-wrap{
+  background-image:url(/content/dam/dynatrace/misc/backgrounds/ticker_bg.jpg);
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height:200px;
+  padding-top:15px;
+  padding-bottom:15px;
+}
+
+.ticker_header{
+  font-weight:200;
+  color:white;
+  text-align:center;
+  display:inline;
+}
+
+
+
+.ticker_content{
+  padding:50px;
+  padding-bottom:80px;
+  width:100%;
+  color: white;
+  font-weight:600;
+  text-align:center;
+  font-size:28px;
+  a{
+    color: white;
+    text-decoration:none;
+  }
+}
+
+
+.ticker_control{
+  position: absolute;
+  top: 10%;
+  left: 0px;
+  bottom: 0px;
+  width: 15%;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+
+@media(max-width: 428px){
+  .ticker_control{
+    top:20%;
+  }
+}
+
+
+
+//Language Select Dropwdown
+ 
+
+
+.lang-button{
+  font-weight:600;
+  float:right;
+  width:auto;
+  font-size:12px;
+  padding:2px;
+  color:white;
+  background-color:transparent;
+  border-radius:0px;
+  @include transition(all 200ms ease);
+  &:active{
+    color:#0090b6;
+ 
+  }
+  &:hover{
+   color:#0090b6; 
+  }
+  &:focus{
+    color:#0090b6;
+  }
+}
+
+
+.lang-button{
+  font-weight:600;
+  float:right;
+  width:auto;
+  font-size:12px;
+  padding:2px;
+  color:white;
+  background-color:transparent;
+  border-radius:0px;
+  @include transition(all 200ms ease);
+  &:active{
+    color:#0090b6;
+ 
+  }
+  &:hover{
+   color:#0090b6; 
+  }
+  &:focus{
+    color:#0090b6;
+  }
+}
+
+.lang-dropdown{
+  background-color: rgba(255,255,255,.90);
+  @include transition(all 300ms ease);
+  min-width:100px;
+}
+
+
+.lang-dropdown>li>a:hover, .dropdown-menu>li>a:focus {
+text-decoration: none;
+color: white;
+background-color: #0090b6;
+}
+
+
+
+.dropdown-menu>li>a {
+width: 100%;
 }

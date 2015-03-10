@@ -1,0 +1,186 @@
+//default-button overwrites----------------------------------
+
+.default-button{
+  font-family: $font-family-sans-serif;
+  @include thin;
+  font-size: 1em;
+  letter-spacing: 1px;
+  background-color: $apm-blue;
+  color: lighten( #222222, 80% );
+  text-align: center;
+  text-transform: uppercase;
+  padding-left:30px;
+  padding-right:30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: none;
+  border: none;
+  border-radius:3px;
+  margin:10px;
+  display: inline;
+  cursor: pointer;
+}
+
+.default-button:hover{
+  background-color: darken($apm-blue, 10%);
+  color: white;
+    text-decoration:none;
+  @include transition (all 300ms ease-in-out);
+  & :focus{
+    top:2px;
+    right:2px;
+  }
+
+}
+
+
+.apm-red-button{
+  font-family: $font-family-sans-serif;
+  @include thin;
+  font-size: 1em;
+  letter-spacing: 1px;
+  background-color: $apm-red;
+  color: lighten( #222222, 80% );
+  text-align: center;
+  text-transform: uppercase;
+  padding-left:30px;
+  padding-right:30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: none;
+  border: none;
+  border-radius:3px;
+  margin:10px;
+  display: inline;
+  cursor: pointer;
+}
+
+.apm-red-button:hover{
+  background-color: darken($apm-red, 10%);
+  color: white;
+    text-decoration:none;
+  @include transition (all 300ms ease-in-out);
+  & :focus{
+    top:2px;
+    right:2px;
+  }
+
+}
+
+ //brand-secondary button --------------------------------
+
+.secondary-button{
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: 1px;
+  background-color: $apm-green;
+  color: lighten( #222222, 80% );
+  text-align: center;
+  text-transform: uppercase;
+  padding-left:30px;
+  padding-right:30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: none;
+  border: none;
+  border-radius:3px;
+  margin:10px;
+  display: inline;
+  cursor: pointer;
+}
+
+.secondary-button:hover{
+  background-color: darken( $apm-green, 10%);
+  @include transition (all 300ms ease-in-out);
+    color: white;
+    text-decoration: none;
+    & :focus{
+        top:2px;
+        right:2px;
+      }
+
+}
+
+
+//full width button ----------------------------------
+
+.full-button{
+  margin:10px;
+  padding-left:30px;
+  padding-right:30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: $font-family-sans-serif;
+  @include thin;
+  font-size: 1em;
+  letter-spacing: 1px;
+  background-color: $apm-blue;
+  color: lighten( #222222, 80% );
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  border-radius:3px;
+  display: block;
+  cursor: pointer;
+}
+
+.full-button:hover{
+  background-color: darken($apm-blue, 10%);
+  @include transition (all 300ms ease-in-out);
+    color: white;
+    text-decoration: none;
+    & :focus{
+        top:2px;
+        right:2px;
+        color: white;
+      }
+
+}
+
+//ghost button styles --------------------------------
+.ghost-button{
+  font-family: $font-family-sans-serif;
+  @include med;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: $apm-blue;
+  text-align: center;
+  text-transform: uppercase;
+  padding-left:30px;
+  padding-right:30px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  outline: none;
+  border: 3px solid $apm-blue;
+  border-radius:5px;
+  margin-top:5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+
+}
+
+.ghost-button:hover{
+  background-color: $apm-blue;
+    color: white;
+    text-decoration: none;
+  @include transition (all 300ms ease-in-out);
+  & :focus{
+    top:2px;
+    right:2px;
+  }
+
+}
+
+
+@media (max-width:768px){
+.ghost-button,.default-button,.secondary-button,.full-button,.apm-red-button{
+    padding-left:10px;
+    padding-right: 10px;
+    font-size:.8em;
+}
+
+
+}

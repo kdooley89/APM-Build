@@ -1,0 +1,426 @@
+//Homepage Custom Styles
+.home-topblock {
+    background-image: url(/content/dam/dynatrace/misc/backgrounds/homepage_bg.jpg);
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $top-block;
+    @include spacing;
+    .offset {
+        position: relative;
+        z-index: 2;
+    }
+    h1 {
+        color: white;
+        @include med;
+        text-align: center;
+        margin-bottom: -10px;
+        font-size: 4em;
+    }
+    h2 {
+        color: $apm-blue;
+        @include thin;
+        text-align: center;
+        line-height: 1;
+        font-size: 2.4em;
+        letter-spacing: 6px;
+    }
+    p {
+        @include thin;
+        color: white;
+        font-size: 1.15em;
+        text-align: center;
+        margin-bottom: 50px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .project-title {
+        font-size: 1.35em;
+    }
+    hr {
+        width: 45%;
+        text-align: center;
+    }
+}
+
+.dynatrace-services {
+    padding: 0px;
+    //box-shadow: 0px 0px 15px;
+    img {
+        width: 14.2%;
+    }
+}
+
+//cyan   #2fae59  rgba(47,174,89,1)
+//green #3bbb64 rgba(48,153,176,1)
+//purple #8332a8 rgba(250,75,66,1)
+//yellow #bc9b3a rgba(145,65,182,1)
+
+
+//homepage img blocks
+.home-contain {
+    background-position: top center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+    padding: 0px;
+    text-align: center;
+}
+
+.cyan-contain {
+    background: rgba(47, 174, 89, .90);
+}
+
+.green-contain {
+    background: rgba(48, 153, 176, .90);
+}
+
+.purple-contain {
+    background: rgba(250, 75, 66, .90);
+}
+
+.yellow-contain {
+    background: rgba(145, 65, 182, .90);
+}
+
+.cyan {
+    background-image: url(/assets/img/Photo1.jpg);
+    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo1.jpg);
+    @extend .home-contain;
+}
+
+.cyan:hover {
+    background-image: url(/assets/img/Photo1-cyan.jpg);
+    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo1-cyan.jpg);
+    @include transition (all 300ms ease-in-out);
+}
+
+.green {
+    background-image: url(/assets/img/Photo2.jpg);
+    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo2.jpg);
+    @extend .home-contain;
+}
+
+.green:hover {
+    background-image: url(/assets/img/Photo2-green.jpg);
+    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo2-green.jpg);
+    @extend .home-contain;
+    @include transition (all 300ms ease-in-out);
+}
+
+.purple {
+    background-image: url(/assets/img/Photo3.jpg);
+    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo3.jpg);
+    @extend .home-contain;
+}
+
+.purple:hover {
+    background-image: url(/assets/img/Photo3-purple.jpg);
+    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo3-purple.jpg);
+    @extend .home-contain;
+    @include transition (all 300ms ease-in-out);
+}
+
+.yellow {
+    background-image: url(/assets/img/Photo4.jpg);
+    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo4.jpg);
+    @extend .home-contain;
+}
+
+.yellow:hover {
+    background-image: url(/assets/img/Photo4-yellow.jpg);
+    background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Photo4-yellow.jpg);
+    @extend .home-contain;
+    @include transition (all 300ms ease-in-out);
+}
+
+@media(max-width:2560px) and (min-width:1200px) {
+    .cyan, .green, .purple, .yellow {
+        width: 25%; //275px
+        height: 33em; //490px
+        display: inline-block;
+    }
+    .home-topblock {
+        max-height: 750px;
+    }
+    .dyna-stats {
+        margin-top: 175px; //125px
+    }
+}
+
+@media(max-width:1200px) and (min-width:992px) {
+    .cyan, .green, .purple, .yellow {
+        width: 25%; //250px
+        height: 28.75em; //460px
+        display: inline-block;
+    }
+    .home-topblock {
+        max-height: 700px;
+    }
+    .dyna-stats {
+        margin-top: 143px;
+    }
+}
+
+@media(max-width: 992px) and (min-width:768px) {
+    .cyan, .green, .purple, .yellow {
+        width: 25%;
+        height: 23em;
+        display: inline-block;
+        p {
+            font-size: 80%;
+        }
+    }
+    .dyna-stats {
+        margin-top: 25px;
+    }
+}
+
+@media(max-width: 768px) and (min-width:557px) {
+    .cyan, .green, .purple, .yellow {
+        width: 50%;
+        height: 23em;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .dyna-stats {
+        margin-top: 25px;
+    }
+}
+
+@media(max-width: 556px) and (min-width:300px) {
+    .cyan, .green, .purple, .yellow {
+        width: 50%;
+        height: 23em;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-bottom: 25px;
+    }
+    .dyna-stats {
+        margin-top: 25px;
+    }
+}
+
+.outer-wrap {
+    padding: 0px;
+}
+
+.init-overlay-wrap {
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+}
+
+.init-overlay {
+    padding: 15px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .65);
+    width: 100%;
+    height: 135px;
+    a:hover {
+        text-decoration: none;
+    }
+    p {
+        font-weight: 100;
+        color: white;
+        font-size: 1em;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+@media(max-width:2560px) and (min-width:1200px) {
+    .init-overlay-wrap {
+        position: relative;
+        bottom: -225px;
+        left: 0px;
+    }
+}
+
+@media(max-width:1200px) and (min-width:992px) {
+    .init-overlay {
+        height: 150px;
+    }
+    .init-overlay-wrap {
+        position: relative;
+        bottom: -151px;
+        left: 0px;
+    }
+}
+
+@media(max-width: 992px) and (min-width:768px) {
+    .init-overlay {
+        height: 147px;
+    }
+    .init-overlay-wrap {
+        position: relative;
+        bottom: -80px;
+        left: 0px;
+        p {
+            font-size: 80%;
+        }
+    }
+}
+
+@media(max-width: 768px) and (min-width:466px) {
+    .init-overlay {
+        height: 110px;
+    }
+    .init-overlay-wrap {
+        position: relative;
+        bottom: -110px;
+        left: 0px;
+        p {
+            font-size: 80%;
+        }
+    }
+}
+
+@media(max-width: 465px) {
+    .init-overlay {
+        height: auto;
+    }
+    .init-overlay-wrap {
+        position: relative;
+        bottom: -130px;
+        left: 0px;
+        p {
+            font-size: 80%;
+        }
+    }
+    .push {
+        position: relative;
+        bottom: -153px;
+        left: 0px;
+    }
+}
+
+//infographics Homepage-----------------------------------
+.dyna-stats {
+    h4 {
+        text-align: center;
+        color: #7f7f7f;
+        margin-bottom: 45px;
+    }
+    .social-stats {
+        text-align: center;
+        color: #7f7f7f;
+    }
+    hr {
+        color: $gray-lighter;
+        width: 90%;
+        border: 1px solid $gray-lighter;
+    }
+}
+
+.dyna-customers {
+    background: $body-section;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    width: 100%;
+    a {
+        margin-top: 25px;
+        color: $link-grey;
+    }
+    img:hover {
+        opacity: .50;
+        @include transition(all 300ms ease);
+    }
+}
+
+.customer-width {
+    width: 14.285714286%;
+    display: inline;
+    text-align: center;
+}
+
+.apm-video {
+    background-image: url(/assets/img/video-contain.jpg);
+    background-image: url(/content/dam/dynatrace/misc/backgrounds/video-contain.jpg);
+    background-size: cover;
+    margin-bottom: 3em;
+    background-position: right;
+    background-repeat: no-repeat;
+    min-height: 250px;
+}
+
+.apm-video-player {
+    top: 50px;
+    text-align: center;
+}
+
+.apm-home-video {
+    overflow: visible;
+}
+
+.playhead:hover {
+    border-radius: 50%;
+    width: 110px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
+    box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.45);
+    @include transform (all 600ms ease-in-out);
+}
+
+//youtube embed video overwrites-----------------------------------
+.modal.fade .modal-dialog {
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+}
+
+.modal.in .modal-dialog {}
+
+.news {
+    padding-top: 25px;
+    padding-bottom: 50px;
+    a {
+        color: #222222;
+    }
+    .benchmarks,
+    .news-cont,
+    .events,
+    .freemiums {
+        margin-bottom: 50px;
+    }
+    hr {
+        color: #cacbcd;
+        border: 1px solid #cacbcd;
+        width: 60px;
+        text-align: center;
+    }
+    p {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    img:hover {
+        opacity: .75;
+        @include transition (all 300ms ease);
+    }
+}
+
+.bottom-color-blue {
+    height: 5px;
+    background-color: $apm-blue;
+}
+
+.bottom-color-red {
+    height: 5px;
+    background-color: $apm-red;
+}
+
+.bottom-color-green {
+    height: 5px;
+    background-color: $apm-green;
+}

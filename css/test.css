@@ -1,0 +1,23 @@
+body {
+  font-family: 'Open Sans', Helvetica, san-serif;
+  box-sizing: border-box; }
+  body img {
+    width: 100%;
+    height: auto; }
+
+.profile-pic {
+  float: left;
+  width: 250px; }
+  @media screen and (max-width: 320px) {
+    .profile-pic {
+      width: 100px;
+      float: none; } }
+  @media screen and (max-width: 768px) {
+    .profile-pic {
+      border: 2px solid #eeeeee; } }
+  @media screen and (min-width: 1200px) {
+    .profile-pic {
+      float: right; } }
+
+@media only screen and (max-width: 320px) {
+  background: red; }
