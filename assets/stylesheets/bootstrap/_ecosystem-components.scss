@@ -16,6 +16,10 @@
     }
     a {
         color: white;
+        &:hover{
+        color: $apm-blue;
+        @include transition (all 300ms ease);    
+        }
     }
 }
 
@@ -34,6 +38,7 @@
 .eco-intro-desc {
     line-height: 1.9;
     font-size: 16px;
+     
 }
 
 //eco video styles
@@ -189,6 +194,7 @@ margin-bottom: 75px;
   height: 163px;
     p{
     padding-top: 15px;
+    font-size: 14px;
     }
 }
 
@@ -241,6 +247,7 @@ font-weight: 100;
         display: block;
     }
 }
+
 
 
 .active-open{

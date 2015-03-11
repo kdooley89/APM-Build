@@ -10,7 +10,11 @@
 //= require ./bootstrap/modal
 //= require ./bootstrap/tooltip
 //= require ./bootstrap/popover
-//= require ./bootstrap/jquery.easytabs.min.js
-//= require ./scrollReveal.min.js
-//= require ./product-features.js
-//= require ./sticky.js
+//= require ./bootstrap/jquery.easytabs.min
+//= require ./bootstrap/scrollReveal.min
+//= require ./bootstrap/product-features
+//= require ./bootstrap/sticky
+//= require ./bootstrap/scrollReveal.min-min
+//= require ./bootstrap/quote-slider
+//= require ./bootstrap/product-features-min
+//= require ./bootstrap/tabulous
