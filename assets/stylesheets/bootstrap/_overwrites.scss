@@ -5,16 +5,6 @@
 //lg: 1200px
 
 
-//animates all elements on resize
-[class*='col-']{
-    -webkit-transition:all 500ms ease;
-         -moz-transition:all 500ms ease;
-               -o-transition:all 500ms ease;
-                     transition:all 500ms ease;
-}
-
-
-
 //Standards
 .img-center{
      margin-left:auto;
@@ -799,6 +789,7 @@ padding-left:50px;
 }
 
 
+
 //CTA CONTAINER ------------------------------------------
 
 .cta{
@@ -1505,7 +1496,6 @@ background: $body-section;
     paddiong-top: 25px;
     padding-bottom: 25px;
     text-align: center;
-
 }
 
 // Initiatives-Overview --------------------------------------------------

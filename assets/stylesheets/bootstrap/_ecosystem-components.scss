@@ -1,283 +1,291 @@
 //intro container
 .eco-hero-wrap {
-    background-position: center center;
-    background-attachment: fixed;
-    @extend .col-md-12;
+  background-position: center center;
+  background-attachment: fixed;
+  @extend .col-md-12;
 }
 
 .eco-hero-block {
-    @extend .row;
-    min-height: 540px;
+  @extend .row;
+  min-height: 540px;
+  color: white;
+  text-align: center;
+  padding-top: 200px;
+  h1 {
+    font-size: 55px;
+    padding-bottom: 10px;
+  }
+  a {
     color: white;
-    text-align: center;
-    padding-top: 200px;
-    h1 {
-        font-size: 55px;
-        padding-bottom: 10px;
+    &:hover {
+      color: $apm-blue;
+      @include transition (all 300ms ease);
     }
-    a {
-        color: white;
-        &:hover {
-            color: $apm-blue;
-            @include transition (all 300ms ease);
-        }
-    }
+  }
 }
 
 //eco intro styles
 .eco-intro-wrap {
-    @extend .col-md-12;
-    padding-top: 100px;
-    padding-bottom: 50px;
+  @extend .col-md-12;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 .eco-intro-logo {
-    @extend .col-sm-6;
-    padding-bottom: 50px;
+  @extend .col-sm-6;
+  padding-bottom: 50px;
 }
 
 .eco-intro-desc {
-    @extend .col-sm-6;
-    line-height: 1.9;
-    font-size: 16px;
+  @extend .col-sm-6;
+  line-height: 1.9;
+  font-size: 16px;
 }
 
 //eco video styles
-
 .eco-video-wrap {
-    @extend .col-md-6;
-    height: 400px;
-    background-color: $apm-blue;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    border-top: 1px solid #d1d1d1;
+  @extend .col-md-6;
+  height: 400px;
+  background-color: $apm-blue;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-top: 1px solid #d1d1d1;
 }
 
 .eco-vid-playhead {
-    z-index: 3;
-    height: 75px;
+  z-index: 3;
+  height: 75px;
+  width: 75px;
+  margin: auto;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  &:hover {
     width: 75px;
-    margin: auto;
-    position: absolute;
+    @include transition (all 400ms ease);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
     border-radius: 50%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    &:hover {
-        width: 75px;
-        @include transition (all 400ms ease);
-        cursor: pointer;
-        -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
-        -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
-        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
-        border-radius: 50%;
-    }
+  }
 }
 
 //eco quote styles
 .eco-quote-outer {
-    @extend .col-md-12;
+  @extend .col-md-12;
 }
 
-
 .eco-wrap-right {
-    max-width: 580px;
-    padding-left: 50px;
+  max-width: 580px;
+  padding-left: 50px;
+  @media screen and (max-width: 992px) {
+   width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
 }
 
 .eco-quote-wrap {
-    @extend .col-md-6;
-    height: 400px;
-    background-color: $top-block;
-    color: white;
-    padding-top: 40px;
-    padding-bottom: 50px;
-    overflow: hidden;
-    span {
-        font-size: 18px;
-    }
+  @extend .col-md-6;
+  height: 400px;
+  background-color: $top-block;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  overflow: hidden;
+  span {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 992px) {
+  text-align: center;
+  }
 }
 
 .eco-quote {
-    font-size: 22px;
-    line-height: 2;
-    font-weight: 100;
-    padding-bottom: 40px;
+  font-size: 22px;
+  line-height: 2;
+  font-weight: 100;
+  padding-bottom: 40px;
+  
 }
 
 //blue sub callout
 .eco-sub-callout {
-    @extend .col-md-12;
-    background-color: $apm-blue;
-    color: white;
-    text-align: center;
-    padding-bottom: 20px;
-    padding-top: 25px;
-    .sub-callout {
-        font-size: 18px;
-    }
+  @extend .col-md-12;
+  background-color: $apm-blue;
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 25px;
+  .sub-callout {
+    font-size: 18px;
+  }
 }
-
-
 
 //h2 titles
 .eco-title-intro {
-    text-align: center;
-    font-weight: 100;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    letter-spacing: 3px;
-    h2 {
-        font-size: 26px;
-    }
+  text-align: center;
+  font-weight: 100;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  letter-spacing: 3px;
+  h2 {
+    font-size: 26px;
+  }
 }
 
-
-
 //screenshot styles
-.getting-started-wrap{
-    @extend .col-md-12;
-    background-color:#f6f6f6;
+.getting-started-wrap {
+  @extend .col-md-12;
+  background-color: #f6f6f6;
 }
 
 .eco-getting-started {
-    text-align: center;
-    @extend .container;
+  text-align: center;
+  @extend .container;
 }
 
 .eco-ss {
-    @extend .col-sm-4;
-    text-align: center;
-    margin-bottom: 45px;
-    font-size: 12px;
+  @extend .col-sm-4;
+  text-align: center;
+  margin-bottom: 45px;
+  font-size: 12px;
+  line-height: 1.5;
+  img {
+    border: 1px solid #d1d1d1;
+    margin-bottom: 15px;
+  }
+  p {
+    font-weight: 400;
+    font-size: 16px;
     line-height: 1.5;
-    img {
-        border: 1px solid #d1d1d1;
-        margin-bottom: 15px;
-    }
-    p {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-    }
+  }
 }
 
 //Download List
 #open-downloads {
-    display: none;
+  display: none;
 }
 
 #show-downloads:hover {
-    color: $apm-blue;
-    @include transition (all 300ms ease);
-    cursor: pointer;
+  color: $apm-blue;
+  @include transition (all 300ms ease);
+  cursor: pointer;
 }
 
 .eco-dl-item {
-    @extend .col-md-3, .col-sm-6;
-    text-align: center;
-    margin-bottom: 50px;
-    a {
-        text-decoration: underline;
-        font-weight: bold;
+  @extend .col-md-3, .col-sm-6;
+  text-align: center;
+  margin-bottom: 50px;
+  a {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  img {
+    margin-bottom: 20px;
+    border: 1px solid #d1d1d1;
+    &:hover {
+      opacity: .75;
+      @include transition (all 300ms ease);
     }
-    img {
-        margin-bottom: 20px;
-        border: 1px solid #d1d1d1;
-        &:hover {
-            opacity: .75;
-            @include transition (all 300ms ease);
-        }
-    }
+  }
 }
 
 #eco-download:hover {
-    color: $apm-blue;
-    @include transition (all 300ms ease);
+  color: $apm-blue;
+  @include transition (all 300ms ease);
 }
 
-
-
 //Related Links styles
-
-.eco-related-link-wrap{
-    @extend .col-md-12;
+.eco-related-link-wrap {
+  @extend .col-md-12;
 }
 
 .eco-related-links {
-    @extend .container;
-    margin-bottom: 75px;
+  @extend .container;
+  margin-bottom: 75px;
 }
 
 .related-link-item {
-    @extend .col-md-6;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 50px;
-    height: 163px;
-    p {
-        padding-top: 15px;
-        font-size: 14px;
-    }
+  @extend .col-md-6;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+  height: 163px;
+  p {
+    padding-top: 15px;
+    font-size: 14px;
+  }
 }
 
+.relate-link-img{
+  height: auto;
+  @media screen and (max-width: 480px) {
+  height: 25px;
+  }
+}
+
+
 .eco-vid-related-playhead {
-    height: 50px;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  &:hover {
     width: 50px;
-    margin: auto;
-    position: absolute;
+    @include transition (all 300ms ease);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
     border-radius: 50%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    &:hover {
-        width: 50px;
-        @include transition (all 300ms ease);
-        cursor: pointer;
-        -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
-        -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
-        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
-        border-radius: 50%;
-    }
+  }
 }
 
 //eco button groups
 .eco-download-buttons {
-    @extend .container;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+  @extend .container;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .eco-button {
-    font-weight: 100;
+  font-weight: 100;
 }
 
 //Media Queries for typography
 @media(max-width:480px) {
-    .eco-quote {
-        font-size: 20px;
-        font-weight: 100;
-        padding-bottom: 40px;
-        text-align: center;
-    }
-    .eco-wrap-right {
-        padding-left: 0px;
-    }
-    .eco-button {
-        display: block;
-    }
+  .eco-quote {
+    font-size: 20px;
+    font-weight: 100;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .eco-wrap-right {
+    padding-left: 0px;
+  }
+  .eco-button {
+    display: block;
+  }
 }
 
 .active-open {
-    -ms-transform: rotate(180deg);
-    /* IE 9 */
-    
-    -webkit-transform: rotate(180deg);
-    /* Chrome, Safari, Opera */
-    
-    transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  /* IE 9 */
+  -webkit-transform: rotate(180deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
 }
