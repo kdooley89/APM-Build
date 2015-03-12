@@ -1,11 +1,12 @@
 //intro container
-
-.eco-hero-wrap{
+.eco-hero-wrap {
     background-position: center center;
     background-attachment: fixed;
+    @extend .col-md-12;
 }
 
 .eco-hero-block {
+    @extend .row;
     min-height: 540px;
     color: white;
     text-align: center;
@@ -16,33 +17,35 @@
     }
     a {
         color: white;
-        &:hover{
-        color: $apm-blue;
-        @include transition (all 300ms ease);    
+        &:hover {
+            color: $apm-blue;
+            @include transition (all 300ms ease);
         }
     }
 }
 
-
-
 //eco intro styles
 .eco-intro-wrap {
+    @extend .col-md-12;
     padding-top: 100px;
     padding-bottom: 50px;
 }
 
 .eco-intro-logo {
+    @extend .col-sm-6;
     padding-bottom: 50px;
 }
 
 .eco-intro-desc {
+    @extend .col-sm-6;
     line-height: 1.9;
     font-size: 16px;
-     
 }
 
 //eco video styles
+
 .eco-video-wrap {
+    @extend .col-md-6;
     height: 400px;
     background-color: $apm-blue;
     background-size: cover;
@@ -51,34 +54,41 @@
     border-top: 1px solid #d1d1d1;
 }
 
-.eco-vid-playhead{ 
+.eco-vid-playhead {
     z-index: 3;
     height: 75px;
     width: 75px;
     margin: auto;
     position: absolute;
     border-radius: 50%;
-    top: 0; left: 0; bottom: 0; right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     &:hover {
-         width: 75px;
+        width: 75px;
         @include transition (all 400ms ease);
         cursor: pointer;
-        -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
-        -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
-        box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
+        -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
         border-radius: 50%;
     }
 }
 
-
 //eco quote styles
+.eco-quote-outer {
+    @extend .col-md-12;
+}
+
+
 .eco-wrap-right {
     max-width: 580px;
     padding-left: 50px;
 }
 
 .eco-quote-wrap {
-    
+    @extend .col-md-6;
     height: 400px;
     background-color: $top-block;
     color: white;
@@ -91,14 +101,15 @@
 }
 
 .eco-quote {
-    font-size: 24px;
+    font-size: 22px;
+    line-height: 2;
     font-weight: 100;
     padding-bottom: 40px;
 }
 
 //blue sub callout
-
 .eco-sub-callout {
+    @extend .col-md-12;
     background-color: $apm-blue;
     color: white;
     text-align: center;
@@ -110,6 +121,7 @@
 }
 
 
+
 //h2 titles
 .eco-title-intro {
     text-align: center;
@@ -117,17 +129,26 @@
     padding-top: 50px;
     padding-bottom: 50px;
     letter-spacing: 3px;
-    h2{
-    font-size: 26px;
-}}
+    h2 {
+        font-size: 26px;
+    }
+}
+
 
 
 //screenshot styles
-.eco-getting-started{
-text-align: center;
+.getting-started-wrap{
+    @extend .col-md-12;
+    background-color:#f6f6f6;
+}
+
+.eco-getting-started {
+    text-align: center;
+    @extend .container;
 }
 
 .eco-ss {
+    @extend .col-sm-4;
     text-align: center;
     margin-bottom: 45px;
     font-size: 12px;
@@ -136,29 +157,28 @@ text-align: center;
         border: 1px solid #d1d1d1;
         margin-bottom: 15px;
     }
-    p{
+    p {
         font-weight: 400;
         font-size: 16px;
         line-height: 1.5;
     }
 }
 
-
 //Download List
-#open-downloads{
-display: none;
+#open-downloads {
+    display: none;
 }
 
-#show-downloads:hover{
-color: $apm-blue;
-@include transition (all 300ms ease);
+#show-downloads:hover {
+    color: $apm-blue;
+    @include transition (all 300ms ease);
     cursor: pointer;
 }
 
-
 .eco-dl-item {
+    @extend .col-md-3, .col-sm-6;
     text-align: center;
-    margin-bottom:50px;
+    margin-bottom: 50px;
     a {
         text-decoration: underline;
         font-weight: bold;
@@ -166,71 +186,75 @@ color: $apm-blue;
     img {
         margin-bottom: 20px;
         border: 1px solid #d1d1d1;
-        &:hover{
-          opacity: .75;
-          @include transition (all 300ms ease);
+        &:hover {
+            opacity: .75;
+            @include transition (all 300ms ease);
         }
     }
 }
 
-
-#eco-download:hover{
-color: $apm-blue;
-@include transition (all 300ms ease);
+#eco-download:hover {
+    color: $apm-blue;
+    @include transition (all 300ms ease);
 }
+
 
 
 //Related Links styles
 
-.eco-related-links{
-margin-bottom: 75px;
+.eco-related-link-wrap{
+    @extend .col-md-12;
 }
 
+.eco-related-links {
+    @extend .container;
+    margin-bottom: 75px;
+}
 
-.related-link-item{
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 50px;
-  height: 163px;
-    p{
-    padding-top: 15px;
-    font-size: 14px;
+.related-link-item {
+    @extend .col-md-6;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px;
+    height: 163px;
+    p {
+        padding-top: 15px;
+        font-size: 14px;
     }
 }
 
-
-.eco-vid-related-playhead{ 
+.eco-vid-related-playhead {
     height: 50px;
     width: 50px;
     margin: auto;
     position: absolute;
     border-radius: 50%;
-    top: 0; left: 0; bottom: 0; right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     &:hover {
-         width: 50px;
+        width: 50px;
         @include transition (all 300ms ease);
         cursor: pointer;
-        -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
-        -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
-        box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.93);
+        -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
+        -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
         border-radius: 50%;
     }
 }
 
-
-
 //eco button groups
-
-.eco-download-buttons{
+.eco-download-buttons {
+    @extend .container;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.eco-button{
-font-weight: 100;
+.eco-button {
+    font-weight: 100;
 }
-
 
 //Media Queries for typography
 @media(max-width:480px) {
@@ -248,11 +272,12 @@ font-weight: 100;
     }
 }
 
-
-
-.active-open{
--ms-transform: rotate(180deg); /* IE 9 */
-    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+.active-open {
+    -ms-transform: rotate(180deg);
+    /* IE 9 */
+    
+    -webkit-transform: rotate(180deg);
+    /* Chrome, Safari, Opera */
+    
     transform: rotate(180deg);
-
 }
