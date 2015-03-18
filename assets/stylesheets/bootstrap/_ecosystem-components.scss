@@ -14,6 +14,10 @@
   h1 {
     font-size: 55px;
     padding-bottom: 10px;
+    letter-spacing: 6px;
+    @media screen and (max-width: $break-x-small) {
+     font-size: 40px;
+    }
   }
   a {
     color: white;
@@ -83,13 +87,12 @@
 .eco-wrap-right {
   max-width: 580px;
   padding-left: 50px;
-  @media screen and (max-width: 992px) {
-   width: 100%;
+  @media screen and (max-width: $break-medium) {
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: block;
   }
-  
 }
 
 .eco-quote-wrap {
@@ -103,8 +106,8 @@
   span {
     font-size: 18px;
   }
-  @media screen and (max-width: 992px) {
-  text-align: center;
+  @media screen and (max-width: $break-medium) {
+    text-align: center;
   }
 }
 
@@ -113,7 +116,6 @@
   line-height: 2;
   font-weight: 100;
   padding-bottom: 40px;
-  
 }
 
 //blue sub callout
@@ -225,13 +227,12 @@
   }
 }
 
-.relate-link-img{
+.relate-link-img {
   height: auto;
-  @media screen and (max-width: 480px) {
-  height: 25px;
+  @media screen and (max-width: $break-x-small) {
+    height: 25px;
   }
 }
-
 
 .eco-vid-related-playhead {
   height: 50px;
@@ -267,7 +268,7 @@
 }
 
 //Media Queries for typography
-@media(max-width:480px) {
+@media(max-width: $break-x-small) {
   .eco-quote {
     font-size: 20px;
     font-weight: 100;
@@ -285,7 +286,9 @@
 .active-open {
   -ms-transform: rotate(180deg);
   /* IE 9 */
+  
   -webkit-transform: rotate(180deg);
   /* Chrome, Safari, Opera */
+  
   transform: rotate(180deg);
 }
