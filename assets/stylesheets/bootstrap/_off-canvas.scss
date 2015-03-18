@@ -478,6 +478,7 @@ transition: background 300ms ease;
     -webkit-transition: visibility 0s 0s;
     -moz-transition: visibility 0s 0s;
     transition: visibility 0s 0s;
+    overflow-x: hidden;
   }
 }
 
