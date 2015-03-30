@@ -1,20 +1,21 @@
 //intro container
 .eco-hero-wrap {
   background-position: center center;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   @extend .col-md-12;
 }
 
 .eco-hero-block {
   @extend .row;
-  min-height: 540px;
+  min-height: 440px;
   color: white;
   text-align: center;
-  padding-top: 200px;
+  padding-top: 130px;
   h1 {
     font-size: 55px;
     padding-bottom: 10px;
-    letter-spacing: 6px;
+    letter-spacing: 2px;
     @media screen and (max-width: $break-x-small) {
      font-size: 40px;
     }
@@ -43,7 +44,7 @@
 .eco-intro-desc {
   @extend .col-sm-6;
   line-height: 1.9;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 //eco video styles
@@ -112,10 +113,13 @@
 }
 
 .eco-quote {
-  font-size: 22px;
+  font-size: 17px;
   line-height: 2;
   font-weight: 100;
-  padding-bottom: 40px;
+  padding-bottom: 35px;
+  @media screen and (max-width: $break-small) {
+  font-size: 14px;
+  }
 }
 
 //blue sub callout
@@ -128,6 +132,14 @@
   padding-top: 25px;
   .sub-callout {
     font-size: 18px;
+    a {
+   color: white;
+   text-decoration: none;
+      &:hover{
+      @include transition (all 300ms ease);
+        opacity: .75;
+      }
+   }
   }
 }
 
@@ -161,7 +173,7 @@
   font-size: 12px;
   line-height: 1.5;
   img {
-    border: 1px solid #d1d1d1;
+    //border: 1px solid #d1d1d1;
     margin-bottom: 15px;
   }
   p {
@@ -265,12 +277,12 @@
 
 .eco-button {
   font-weight: 100;
+  display: inline-block;
 }
 
 //Media Queries for typography
 @media(max-width: $break-x-small) {
   .eco-quote {
-    font-size: 20px;
     font-weight: 100;
     padding-bottom: 40px;
     text-align: center;

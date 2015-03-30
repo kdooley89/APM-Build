@@ -29,7 +29,8 @@
 
   <!--off-canvas menu-->
   <header class="cd-main-header">
-    <a class="cd-logo" href="#0"><img src="http://www.dynatrace.com/content/dam/dynatrace/misc/dynatrace_web.png" alt="Logo">
+    <a class="cd-logo" href="http://www.dynatrace.com">
+    <img class="header-brand" src="/assets/img/dynatrace_web.png" alt="logo">
     </a>
 
     <ul class="cd-header-buttons">
@@ -62,13 +63,53 @@
 
 
 
+<!--sticky nav container-->
+    <div class="col-md-12 col-sm-12 col-xs-12 sticky hidden-xs">
+        <div class="container">
+            <div id='cssmenu' class=" col-lg-6 col-md-12 col-sm-12">
+                <ul>
+                    <li><a href='#capabilities'><span>CAPABILITIES</span></a>
+                    </li>
+                    <li><a href='#customers'><span>CUSTOMERS</span></a>
+                    </li>
+                    <li><a href='#environments'><span>ENVIRONMENT</span></a>
+                    </li>
+                    <li><a href='#technology'><span>TECHNOLOGY</span></a>
+                    </li>
+                    <li class='last'><a href='#devops'><span>DEVOPS</span></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-6 hidden-md hidden-sm snap-buttons">
+                <a href="#" class="secondary-button">FREE TRIAL</a>
+                <a href="#" class="default-button">HOW TO BUY</a>
+                <a href="#" class="default-button">PLUGINS</a>
+            </div>
+
+        </div>
+    </div>
+    <!--end Sticky Nav-->
+
+
+
+
     <!--Item Description Container-->
     <div class="eco-intro-wrap" id="value">
       <div class="container">
         <div class="eco-intro-logo"><img class="img-center" src="http://www.dynatrace.com/content/dam/dynatrace/misc/logos/SAP-logo.png">
         </div>
         <div class="eco-intro-desc">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolorum minima, nisi ab sit, illum corporis modi quibusdam eveniet excepturi deleniti fugit dignissimos culpa fuga iure similique iusto alias ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illo molestiae, nihil porro? Consectetur facere, voluptates laborum! Voluptatem provident, quibusdam iure natus, odio repellat porro ipsam assumenda laboriosam eius aliquid.</p>
+          <p>SharePoint deployments have become more complex with the rise of custom code, third party applications and web parts. With this complexity, it has become difficult for IT to ensure a positive user experience and prevent downtime when issues occur. There is a need to ensure the performance of business critical applications running on SharePoint.</p>
+          <p>With Dynatrace, analyze any performance hotspots, configuration or deployment issues in a SharePoint installation. As one responsible for SharePoint you want to know:
+            <ul>
+              <li>Why certain pages, lists or views in SharePoint are slow</li>
+              <li>Which web parts have implementation issues such as inefficient database access or bad coding</li>
+              <li>Whether you have configuration problems that lead to bad or slow behavior</li>
+              <li>Which pages, lists or views are actually used or are not used</li>
+              <li>Whether your current server resources (CPU, memory, disk, network) can handle the expected load</li>
+            </ul>
+          </p>
         </div>
       </div>
     </div>
@@ -105,22 +146,23 @@
     <!--  Start Headshot with Quote-->
     <div class="eco-quote-outer">
       <div class="row">
-        <div class="eco-video-wrap" style="background-image:url(http://placehold.it/650x450&text=Headshot+Image);">
+        <div class="eco-video-wrap" style="background-image:url(http://www.dynatrace.com/content/dam/dynatrace/ecosystem-assets/wendy.png);">
         </div>
 
         <div class="eco-quote-wrap">
           <div class="eco-wrap-right">
-            <p class="eco-quote">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolorem quibusdam repellat consequuntur minus pariatur ipsa blanditiis vitae, consectetur ducimus, voluptatem praesentium."</p>
-            <p><span>Eric Banks</span>
+            <p class="eco-quote">“After using this product, I know several clients that I could recommend this tool to. But one in particular really stands out, as they've recently had several incidents of performance and downtime issues…I'm fairly confident that had they had a tool like Dynatrace monitoring their server performance, we could have solved this issue in minutes instead of days.”
             </p>
-            <p><i>Systems Engineer</i>
+            <p><span>Wendy Neal</span>
+            </p>
+            <p><i>Senior SharePoint Consultant,<br> McGladrey</i>
             </p>
           </div>
         </div>
       </div>
     </div>
     <div class="eco-sub-callout">
-      <p class="sub-callout">SharePoint deployments have become more complex with the rise of third party applications and web parts.</p>
+      <p class="sub-callout"><a href="http://snip.ly/3wvW">SharePoint deployments have become more complex with the rise of third party applications and web parts.</a></p>
     </div>
     <!--End Headshot with Quote-->
 
@@ -460,52 +502,39 @@
 
   <nav class="cd-nav">
     <ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
-
-      <img src="/assets/img/menu-img.png" alt="Dynatrace-menu" style="max-width:150px; margin-left:auto; margin-right:auto; display:block; padding-top:20px; padding-bottom:20px;">
-
+      <img class="menu-logo" src="/assets/img/menu-img.png" alt="Dynatrace-menu">
       <li class="has-children">
         <a href="#"><i class="fa fa-shopping-cart"></i> &nbsp; Products</a>
-
         <ul class="cd-secondary-nav is-hidden">
           <li class="nav-go-back"><a href="#0"><b>Back</b></a>
           </li>
-
           <li>
             <a href="#">Dynatrace Application Monitoring</a>
           </li>
-
-
           <li>
             <a href="#">Dynatrace Real User Monitoring</a>
           </li>
-
           <li>
             <a href="#">Dynatrace Synthetic Monitoring</a>
           </li>
-
           <li>
             <a href="#">Dynatrace Data Center RUM</a>
           </li>
         </ul>
       </li>
-
       <li class="has-children">
         <a href="#"><i class="fa fa-code"></i> &nbsp; Technology</a>
-
         <ul class="cd-nav-gallery is-hidden">
           <li class="nav-go-back"><a href="#0"><b>Back</b></a>
           </li>
           <li><a href="#">Mobile</a>
           </li>
-
           <li>
             <a href="#">Java</a>
           </li>
-
           <li>
             <a href="#">.NET</a>
           </li>
-
           <li>
             <a href="#">PHP</a>
           </li>
@@ -530,21 +559,17 @@
           <li>
             <a href="#">Launch Readiness</a>
           </li>
-
           <li>
             <a href="#">Performance Engineering</a>
           </li>
-
           <li>
             <a href="#">User Analytics</a>
           </li>
-
           <li>
             <a href="#">Production Monitoring</a>
           </li>
         </ul>
       </li>
-
       <li class="has-children">
         <a href="#"><i class="fa fa-cubes"></i> &nbsp; Initiatives</a>
         <ul class="cd-nav-icons is-hidden">
@@ -553,15 +578,12 @@
           <li>
             <a href="#">Mobile & Omni-Channel</a>
           </li>
-
           <li>
             <a href="#">Mainframe</a>
           </li>
-
           <li>
             <a href="#">Big Data</a>
           </li>
-
           <li>
             <a href="#">Cloud</a>
           </li>
@@ -573,8 +595,6 @@
           </li>
         </ul>
       </li>
-
-
       <li class="has-children">
         <a href="#"><i class="fa fa-check-square-o"></i> &nbsp; Expertise</a>
         <ul class="cd-nav-icons is-hidden">
@@ -583,15 +603,12 @@
           <li>
             <a href="#">Experts</a>
           </li>
-
           <li>
             <a href="#">Community</a>
           </li>
-
           <li>
             <a href="#">Education</a>
           </li>
-
           <li>
             <a href="#">Partners</a>
           </li>
@@ -603,7 +620,6 @@
           </li>
         </ul>
       </li>
-
       <li class="has-children">
         <a href="#"><i class="fa fa-question-circle"></i> &nbsp; About Us </a>
         <ul class="cd-nav-icons is-hidden">
@@ -612,15 +628,12 @@
           <li>
             <a href="#">Company</a>
           </li>
-
           <li>
             <a href="#">Leadership</a>
           </li>
-
           <li>
             <a href="#">Careers</a>
           </li>
-
           <li>
             <a href="#">Locations</a>
           </li>
@@ -632,19 +645,12 @@
           </li>
         </ul>
       </li>
-
       <li>
         <a href="#"><i class="fa fa-file-text-o"></i> &nbsp; Resources</a>
       </li>
-
-
-
       <li>
         <a href="#"><span class="try-free-nav"> <i class="fa fa-cloud-download"></i> &nbsp;Try Free</span></a>
       </li>
-
-
-
       <li class="has-children">
         <a href="#"><i class="fa fa-globe"></i> &nbsp; Choose Language</a>
         <ul class="cd-nav-icons is-hidden">
@@ -670,19 +676,13 @@
           </li>
         </ul>
       </li>
-
-
-
-
-
     </ul>
     <!-- primary-nav -->
   </nav>
   <!-- cd-nav -->
-
-  <div id="cd-search" class="cd-search">
-    <form>
-      <input type="search" placeholder="Search Dynatrace.com">
+   <div class="cd-search">
+    <form method="get" action="/en/search.html" name="searchform">
+      <input required"" name="q" type="search" placeholder="Search Dynatrace.com">
     </form>
   </div>
   <!--ends-off canvas menu-->
@@ -714,6 +714,7 @@
         $(this).toggleClass("active-open");
       });
     });
+    
   </script>
 
 
@@ -766,10 +767,10 @@
       }
     });
   </script>
+  
   <script>
-    $(".sticky").stick_in_parent(".container")
+    $(".sticky").stick_in_parent("body")
   </script>
-
 
 
   <script src="assets/javascripts/bootstrap/main.js"></script>

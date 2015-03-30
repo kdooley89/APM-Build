@@ -67,7 +67,6 @@
 }
 
 .ft-supported-lang {
-    font-family: 'Roboto';
     background-color: $apm-blue;
     color: white;
     font-weight: 100;
@@ -83,6 +82,7 @@
 }
 
 .ft-testimony-wrap {
+  font-family: $fontstack;
     color: white;
     background-color: $tab-grey;
     background-image: url(http://www.dynatrace.com/content/dam/dynatrace/misc/backgrounds/split-overlay.png);
@@ -105,7 +105,7 @@
 }
 
 .ft-testimony {
-    font-family:'Roboto';
+    font-family: $fontstack;
     line-height: 1.9;
     font-size: 24px;
     font-weight: 100;
