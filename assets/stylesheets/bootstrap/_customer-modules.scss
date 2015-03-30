@@ -60,10 +60,10 @@
   right: 0;
   margin: auto;
   position: absolute;
-  width: 125px;
+  width: 85px;
   border-radius: 50%;
   &:hover {
-    width: 125px;
+    width: 85px;
     @include transition (all 400ms ease);
     cursor: pointer;
     -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
@@ -200,10 +200,10 @@
   right: 0;
   margin: auto;
   position: absolute;
-  width: 125px;
+  width: 85px;
   border-radius: 50%;
   &:hover {
-    width: 125px;
+    width: 85px;
     @include transition (all 400ms ease);
     cursor: pointer;
     -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
@@ -493,10 +493,10 @@
     right: 0;
     margin: auto;
     position: absolute;
-    width: 75px;
+    width: 85px;
     border-radius: 50%;
     &:hover {
-      width: 75px;
+      width: 85px;
       @include transition (all 400ms ease);
       cursor: pointer;
       -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);

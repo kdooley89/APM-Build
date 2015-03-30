@@ -3207,7 +3207,25 @@ background-color: #0090b6;
 }
 
 
-
 .dropdown-menu>li>a {
 width: 100%;
+}
+
+
+
+
+//SEO FOOTER STYLING
+
+
+.footer-seo {
+  font-family: 'Open Sans', 'Helvetica', 'Arial', san-serif;
+  font-size: 9px;
+  color: darken(white, 55%);
+  @media screen and (max- width: 480px) {
+    font-size: 7px;
+  }
+  a {
+    color: darken(white, 40%);
+    text-decoration: underline;
+  }
 }
