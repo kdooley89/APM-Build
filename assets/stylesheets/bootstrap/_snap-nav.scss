@@ -108,11 +108,11 @@ background-color: $sticky-hover;
 background-color: rgba(234, 234, 234, .9);
 border-bottom: 1px solid $sticky-hover;
 height: 70px;
-z-index: 1;
+z-index: 4;
     .snap-buttons{
         .default-button, .secondary-button{
             padding-top: 10px;
-            float: right;
+            float: right; 
             margin: 4px;
         }
     

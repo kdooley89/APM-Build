@@ -428,9 +428,7 @@
       <!--ends the row-->
     </div>
     <!--end getting started-->
-
-<a href="" target="_blank"></a>
-
+    
     <!--download button groups-->
 <div class="col-md-12">
   <div class="eco-download-buttons">
@@ -676,11 +674,18 @@
       $("#show-downloads").click(function () {
         $("#open-downloads").slideToggle("slow");
       });
+      
       //toggles the arrow to show more downloads
       $("#show-downloads").click(function () {
         $(this).toggleClass("active-open");
       });
     });
+    
+     $("#img-show-downloads").click(function () {
+        $("#open-downloads").slideToggle("slow");
+        $("#show-downloads").toggleClass("active-open");
+      });
+    
   </script>
 
 

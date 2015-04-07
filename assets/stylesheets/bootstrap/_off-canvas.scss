@@ -695,3 +695,26 @@ support for no js
     @include transition (all 300ms linear);
   }
 }
+
+
+
+ .try-free-menu{
+  position: absolute;
+  top: 5px;
+  font-weight: 100;
+  right: 125px;
+  display: inline-block;
+  width: 130px;
+  background: $apm-green;
+  text-align: center;
+  padding: 11px;
+  color: white;
+  border-radius: 3px;
+  text-decoration:none;
+    &:hover, &:active{
+      background: darken($apm-green, 10%);
+      color: white;
+      @include transition (all 300ms ease);
+      text-decoration:none;
+      }
+  }
