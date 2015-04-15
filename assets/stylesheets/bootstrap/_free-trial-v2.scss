@@ -116,10 +116,6 @@
 .ft-install-desc {
     img {
         padding-bottom: 10px;
-        &:hover {
-            opacity: .75;
-            @include transition (all 300ms ease);
-        }
     }
     text-align: center;
     font-weight: bold;

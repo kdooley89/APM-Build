@@ -881,7 +881,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", "宋体", "SimSun", "STXihei", "华文细黑", "Apple SD Gothic Neo UltraLight", "Gulim", "GulimChe", "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #282e36;
@@ -964,7 +964,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "robotoregular", Helvetica, Arial, "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑", sans-serif;
+  font-family: "robotoregular", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", "宋体", "SimSun", "STXihei", "华文细黑", "Apple SD Gothic Neo UltraLight", "Gulim", "GulimChe", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
   line-height: 1.1;
   color: inherit; }
