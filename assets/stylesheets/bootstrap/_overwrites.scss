@@ -3226,12 +3226,20 @@ width: 100%;
   font-family: 'Open Sans', 'Helvetica', 'Arial', san-serif;
   font-size: 9px;
   color: darken(white, 55%);
-  @media screen and (max- width: 480px) {
+  @media screen and (max-width: 480px) {
     font-size: 7px;
   }
   a {
     color: darken(white, 40%);
     text-decoration: underline;
+  }
+}
+
+.od-link {
+  a {
+    color: #0991b7;
+    text-decoration: underline;
+    font-weight: 400;
   }
 }
 
