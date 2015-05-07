@@ -45,18 +45,18 @@ Main components
 }
 @media only screen and (max-width: 3620px) {
   .cd-main-content.nav-is-visible, .cd-main-header.nav-is-visible {
-    -webkit-transform: translateX(-275px);
-    -moz-transform: translateX(-275px);
-    -ms-transform: translateX(-275px);
-    -o-transform: translateX(-275px);
-    transform: translateX(-275px);
+    -webkit-transform: translateX(-345px);
+    -moz-transform: translateX(-345px);
+    -ms-transform: translateX(-345px);
+    -o-transform: translateX(-345px);
+    transform: translateX(-345px);
   }
   .nav-on-left .cd-main-content.nav-is-visible, .nav-on-left .cd-main-header.nav-is-visible {
-    -webkit-transform: translateX(275px);
-    -moz-transform: translateX(275px);
-    -ms-transform: translateX(275px);
-    -o-transform: translateX(275px);
-    transform: translateX(275px);
+    -webkit-transform: translateX(345px);
+    -moz-transform: translateX(345px);
+    -ms-transform: translateX(345px);
+    -o-transform: translateX(345px);
+    transform: translateX(345px);
   }
 }
 
@@ -328,7 +328,7 @@ text-decoration: none;
   top: 0;
   right: 0;
   height: 100%;
-  width: 275px;
+  width: 345px;
   background: #2e3233;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -349,6 +349,7 @@ text-decoration: none;
   transition: transform 0.3s;
 }
 .cd-primary-nav a, .cd-primary-nav ul a {
+  font-size: 1.2em;
   display: block;
   height: 50px;
   line-height: 50px;
@@ -369,6 +370,9 @@ text-decoration: none;
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   -moz-transition: -moz-transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
+  @media (max-width:480px){
+    font-size: 1em;
+  }
 }
 .cd-primary-nav.is-hidden, .cd-primary-nav ul.is-hidden {
   /* secondary navigations hidden by default */
@@ -487,7 +491,7 @@ transition: background 300ms ease;
   height: 2px;
   width: 10px;
   background: white;
-  opacity: .2;
+  opacity: .3;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -622,18 +626,18 @@ transition: background 300ms ease;
 
 @media only screen and (max-width: 3620px) {
   .cd-overlay.is-visible {
-    -webkit-transform: translateX(-275px);
-    -moz-transform: translateX(-275px);
-    -ms-transform: translateX(-275px);
-    -o-transform: translateX(-275px);
-    transform: translateX(-275px);
+    -webkit-transform: translateX(-345px);
+    -moz-transform: translateX(-345px);
+    -ms-transform: translateX(-345px);
+    -o-transform: translateX(-345px);
+    transform: translateX(-345px);
   }
   .nav-on-left .cd-overlay.is-visible {
-    -webkit-transform: translateX(275px);
-    -moz-transform: translateX(275px);
-    -ms-transform: translateX(275px);
-    -o-transform: translateX(275px);
-    transform: translateX(275px);
+    -webkit-transform: translateX(345px);
+    -moz-transform: translateX(345px);
+    -ms-transform: translateX(345px);
+    -o-transform: translateX(345px);
+    transform: translateX(345px);
   }
   .cd-overlay.is-visible.search-is-visible, .nav-on-left .cd-overlay.is-visible.search-is-visible {
     -webkit-transform: translateX(0);
@@ -693,6 +697,13 @@ support for no js
   @media only screen and (max-width: 480px){
     max-width: 175px;
     @include transition (all 300ms linear);
+  }
+}
+
+
+@media(max-width:480px){
+  .cd-nav .fa{
+  display: none;
   }
 }
 

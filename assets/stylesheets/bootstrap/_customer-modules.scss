@@ -469,6 +469,7 @@
   margin-top: -10px;
   a {
     color: white;
+    cursor: pointer;
     &:hover {
       opacity: .75;
       @include transition (all 300ms ease);
