@@ -55,7 +55,7 @@ $body-section:          #f6f4f4 ; //rgba(238, 238, 238, 1)
 $header-overlay:        rgba(43 , 43, 46, .65);
 
 //typography Over ride ------------------------------------------
-$fontstack: "robotoregular", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", "宋体", "SimSun", "STXihei", "华文细黑", "Apple SD Gothic Neo UltraLight", "Gulim", "GulimChe", "Helvetica", "Arial", sans-serif;
+$fontstack: "Roboto", "robotoregular", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", "宋体", "SimSun", "STXihei", "华文细黑", "Apple SD Gothic Neo UltraLight", "Gulim", "GulimChe", "Helvetica", "Arial", sans-serif;
 $default-text: #292d36;
 
 
@@ -101,7 +101,7 @@ $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:     "robotoregular", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", "宋体", "SimSun", "STXihei", "华文细黑", "Apple SD Gothic Neo UltraLight", "Gulim", "GulimChe", "Helvetica", "Arial", sans-serif !default;
+$headings-font-family:     "Roboto", "robotoregular", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", "宋体", "SimSun", "STXihei", "华文细黑", "Apple SD Gothic Neo UltraLight", "Gulim", "GulimChe", "Helvetica", "Arial", sans-serif !default;
 $headings-font-weight:    300 !default; 
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;

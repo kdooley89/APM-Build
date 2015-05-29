@@ -29,16 +29,21 @@
   <!--off-canvas menu-->
   <header class="cd-main-header">
     <a class="cd-logo" href="http://www.dynatrace.com">
-    <img class="header-brand" src="/assets/img/dynatrace_web.png" alt="logo">
+      <img class="header-brand" src="/assets/img/dynatrace_web.png" alt="logo">
     </a>
 
     <ul class="cd-header-buttons">
-     <li>
-       <a class="try-free-menu hidden-xs" href="#">Try Free <span></span></a>
-     </li>
+      <li>
+        <a class="try-free-menu hidden-xs" href="#">Try Free<span></span></a>
+      </li>
       <li><a class="cd-search-trigger" href="#cd-search"><span></span></a>
       </li>
       <li><a class="cd-nav-trigger" href="#cd-primary-nav"><span></span></a>
+      </li>
+      <li>
+        <a href="#cd-primary-nav">
+          <p class="menu-text cd-nav-trigger">MENU</p>
+        </a>
       </li>
     </ul>
     <!-- cd-header-buttons -->
@@ -62,37 +67,6 @@
       </div>
     </div>
     <!--End Title Container-->
-
-
-
-<!--sticky nav container-->
-    <div class="col-md-12 col-sm-12 col-xs-12 sticky hidden-xs">
-        <div class="container">
-            <div id='cssmenu' class=" col-lg-6 col-md-12 col-sm-12">
-                <ul>
-                    <li><a href='#capabilities'><span>CAPABILITIES</span></a>
-                    </li>
-                    <li><a href='#customers'><span>CUSTOMERS</span></a>
-                    </li>
-                    <li><a href='#environments'><span>ENVIRONMENT</span></a>
-                    </li>
-                    <li><a href='#technology'><span>TECHNOLOGY</span></a>
-                    </li>
-                    <li class='last'><a href='#devops'><span>DEVOPS</span></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-6 hidden-md hidden-sm snap-buttons">
-                <a href="#" class="secondary-button">FREE TRIAL</a>
-                <a href="#" class="default-button">HOW TO BUY</a>
-                <a href="#" class="default-button">PLUGINS</a>
-            </div>
-
-        </div>
-    </div>
-    <!--end Sticky Nav-->
-
 
 
 
@@ -145,56 +119,8 @@
     <!--end Video With Quote Container-->
 
 
-    <!--  Start Headshot with Quote-->
-    <div class="eco-quote-outer">
-      <div class="row">
-        <div class="eco-video-wrap" style="background-image:url(http://www.dynatrace.com/content/dam/dynatrace/ecosystem-assets/wendy.png);">
-        </div>
-
-        <div class="eco-quote-wrap">
-          <div class="eco-wrap-right">
-            <p class="eco-quote">“After using this product, I know several clients that I could recommend this tool to. But one in particular really stands out, as they've recently had several incidents of performance and downtime issues…I'm fairly confident that had they had a tool like Dynatrace monitoring their server performance, we could have solved this issue in minutes instead of days.”
-            </p>
-            <p><span>Wendy Neal</span>
-            </p>
-            <p><i>Senior SharePoint Consultant,<br> McGladrey</i>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="eco-sub-callout">
-      <p class="sub-callout"><a href="http://snip.ly/3wvW">SharePoint deployments have become more complex with the rise of third party applications and web parts.</a></p>
-    </div>
-    <!--End Headshot with Quote-->
-
-
-
-    <!--screenshot with description-->
-    <div class="eco-quote-outer">
-      <div class="row">
-        <div class="eco-video-wrap" style="background-image:url(http://www.dynatrace.com/content/dam/dynatrace/misc/NoSQL-Screenshots/NoSQL-5%20Collage%20650x325.png);">
-        </div>
-
-        <div class="eco-quote-wrap">
-          <div class="eco-wrap-right">
-            <p class="eco-quote">SharePoint deployments have become more complex with the rise of third party applications and web parts. Ensure the performance of business critical applications.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="eco-sub-callout">
-      <p class="sub-callout">SharePoint deployments have become more complex with the rise of third party applications and web parts.</p>
-    </div>
-    <!--end screenshot with description-->
-
-
-
-
-
     <!--Starts Related Links-->
-    <div class="eco-related-link-wrap">
+    <div class="eco-related-link-wrap" id="customers">
       <div class="eco-related-links">
         <div class="eco-title-intro">
           <h2>Related Links</h2>
@@ -206,8 +132,8 @@
                 <img src="http://www.dynatrace.com/content/dam/dynatrace/misc/playhead.png" alt="playhead">
               </div>
             </div>
-            <img src="http://placehold.it/515x170">
-            <p>SharePoint Utilities</p>
+            <img src="http://placehold.it/515x150">
+<!--            <p>SharePoint Utilities</p>-->
           </div>
           <div class="related-link-item">
             <div class="relate-link-img">
@@ -215,8 +141,8 @@
                 <img src="http://www.dynatrace.com/content/dam/dynatrace/misc/playhead.png" alt="playhead">
               </div>
             </div>
-            <img src="http://placehold.it/515x170">
-            <p>SharePoint Video</p>
+            <img src="http://placehold.it/515x150">
+<!--            <p>SharePoint Video</p>-->
           </div>
         </div>
       </div>
@@ -232,7 +158,6 @@
         <div class="eco-title-intro">
           <h2>Getting Started</h2>
         </div>
-
 
         <div class="row">
           <div class="eco-ss">
@@ -506,7 +431,7 @@
     <ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
       <img class="menu-logo" src="/assets/img/menu-img.png" alt="Dynatrace-menu">
       <li class="has-children">
-        <a href="#"><i class="fa fa-shopping-cart"></i> &nbsp; Products</a>
+        <a href="#"><i class="fa fa-shopping-cart fa-fw"></i> &nbsp; Products</a>
         <ul class="cd-secondary-nav is-hidden">
           <li class="nav-go-back"><a href="#0"><b>Back</b></a>
           </li>
@@ -525,7 +450,7 @@
         </ul>
       </li>
       <li class="has-children">
-        <a href="#"><i class="fa fa-code"></i> &nbsp; Technology</a>
+        <a href="#"><i class="fa fa-code fa-fw"></i> &nbsp; Technology</a>
         <ul class="cd-nav-gallery is-hidden">
           <li class="nav-go-back"><a href="#0"><b>Back</b></a>
           </li>
@@ -551,10 +476,10 @@
           </li>
         </ul>
       </li>
-      <li><a href="#"><i class="fa fa-users"></i> &nbsp; Customers</a>
+      <li><a href="#"><i class="fa fa-users fa-fw"></i> &nbsp; Customers</a>
       </li>
       <li class="has-children">
-        <a href="#"><i class="fa fa-crosshairs"></i> &nbsp; Focus</a>
+        <a href="#"><i class="fa fa-crosshairs fa-fw"></i> &nbsp; Focus</a>
         <ul class="cd-nav-icons is-hidden">
           <li class="nav-go-back"><a href="#0"><b>Back</b></a>
           </li>
@@ -573,7 +498,7 @@
         </ul>
       </li>
       <li class="has-children">
-        <a href="#"><i class="fa fa-cubes"></i> &nbsp; Initiatives</a>
+        <a href="#"><i class="fa fa-cubes fa-fw"></i> &nbsp; Initiatives</a>
         <ul class="cd-nav-icons is-hidden">
           <li class="nav-go-back"><a href="#0"><b>Back</b></a>
           </li>
@@ -598,7 +523,7 @@
         </ul>
       </li>
       <li class="has-children">
-        <a href="#"><i class="fa fa-check-square-o"></i> &nbsp; Expertise</a>
+        <a href="#"><i class="fa fa-check-square-o fa-fw"></i> &nbsp; Expertise</a>
         <ul class="cd-nav-icons is-hidden">
           <li class="nav-go-back"><a href="#0"><b>Back</b></a>
           </li>
@@ -623,7 +548,7 @@
         </ul>
       </li>
       <li class="has-children">
-        <a href="#"><i class="fa fa-question-circle"></i> &nbsp; About Us </a>
+        <a href="#"><i class="fa fa-question-circle fa-fw"></i> &nbsp; About Us </a>
         <ul class="cd-nav-icons is-hidden">
           <li class="nav-go-back"><a href="#0"><b>Back</b></a>
           </li>
@@ -632,6 +557,9 @@
           </li>
           <li>
             <a href="#">Leadership</a>
+          </li>
+          <li>
+            <a href="#">APM Leadership</a>
           </li>
           <li>
             <a href="#">Careers</a>
@@ -648,13 +576,13 @@
         </ul>
       </li>
       <li>
-        <a href="#"><i class="fa fa-file-text-o"></i> &nbsp; Resources</a>
+        <a href="#"><i class="fa fa-file-text-o fa-fw"></i> &nbsp; Resources</a>
       </li>
       <li>
-        <a href="#"><span class="try-free-nav"> <i class="fa fa-cloud-download"></i> &nbsp;Try Free</span></a>
+        <a href="#"><span class="try-free-nav"> <i class="fa fa-cloud-download fa-fw"></i> &nbsp;  Try Free</span></a>
       </li>
       <li class="has-children">
-        <a href="#"><i class="fa fa-globe"></i> &nbsp; Choose Language</a>
+        <a href="#"><i class="fa fa-globe fa-fw"></i> &nbsp; Choose Language</a>
         <ul class="cd-nav-icons is-hidden">
           <li class="nav-go-back"><a href="#0"><b>Back</b></a>
           </li>
@@ -682,9 +610,9 @@
     <!-- primary-nav -->
   </nav>
   <!-- cd-nav -->
-   <div class="cd-search">
+  <div class="cd-search">
     <form method="get" action="/en/search.html" name="searchform">
-      <input required"" name="q" type="search" placeholder="Search Dynatrace.com">
+      <input required "" name="q" type="search" placeholder="Search Dynatrace.com">
     </form>
   </div>
   <!--ends-off canvas menu-->
@@ -693,15 +621,13 @@
 
 
 
-
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="assets/javascripts/bootstrap/scrollReveal.min.js"></script>
   <script src="assets/javascripts/bootstrap.js"></script>
-  <script type="text/javascript" src="assets/javascripts/bootstrap/jquery.easytabs.min.js"></script>
   <script src="assets/javascripts/bootstrap/sticky.js" type="text/javascript"></script>
   <script src="assets/javascripts/bootstrap/modernizr.custom.js" type="text/javascript"></script>
-  <script src="assets/javascripts/bootstrap/cbpHorizontalSlideOutMenu.min.js"></script>
-
+  <script src="assets/javascripts/bootstrap/main.js"></script>
+  <script src="assets/javascripts/bootstrap/jquery.mobile.custom.min.js"></script>
 
 
 
@@ -716,66 +642,12 @@
         $(this).toggleClass("active-open");
       });
     });
-    
   </script>
 
-
-  <script>
-    // Cache selectors
-    var lastId,
-      topMenu = $(".sticky"),
-      topMenuHeight = topMenu.outerHeight() + 15,
-      // All list items
-      menuItems = topMenu.find("a"),
-      // Anchors corresponding to menu items
-      scrollItems = menuItems.map(function () {
-        var item = $($(this).attr("href"));
-        if (item.length) {
-          return item;
-        }
-      });
-
-    // Bind click handler to menu items
-    // so we can get a fancy scroll animation
-    menuItems.click(function (e) {
-      var href = $(this).attr("href"),
-        offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
-      $('html, body').stop().animate({
-        scrollTop: offsetTop
-      }, 300);
-      e.preventDefault();
-    });
-
-    // Bind to scroll
-    $(window).scroll(function () {
-      // Get container scroll position
-      var fromTop = $(this).scrollTop() + topMenuHeight;
-
-      // Get id of current scroll item
-      var cur = scrollItems.map(function () {
-        if ($(this).offset().top < fromTop)
-          return this;
-      });
-      // Get the id of the current element
-      cur = cur[cur.length - 1];
-      var id = cur && cur.length ? cur[0].id : "";
-
-      if (lastId !== id) {
-        lastId = id;
-        // Set/remove active class
-        menuItems
-          .parent().removeClass("active")
-          .end().filter("[href=#" + id + "]").parent().addClass("active");
-      }
-    });
-  </script>
   
-  <script>
-    $(".sticky").stick_in_parent("body")
-  </script>
 
-  <script src="assets/javascripts/bootstrap/main.js"></script>
-  <script src="assets/javascripts/bootstrap/jquery.mobile.custom.min.js"></script>
+
+
 
 </body>
 

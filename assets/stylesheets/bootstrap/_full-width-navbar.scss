@@ -628,6 +628,12 @@ margin-bottom: 40px!important;
 float: left;
 }
 
+@media(max-width:992px) and (min-width: 824px){
+  .default-logo{
+    width: 25%;
+  }
+}
+
 @media screen and (max-width: 823px){
     .default-logo{
         float: none;

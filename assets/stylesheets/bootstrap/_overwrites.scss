@@ -1518,7 +1518,7 @@ background: $body-section;
     //background-attachment: fixed;
     min-height: 200px; 
     padding: 20px;
-    padding-top: 60px;
+    padding-top: 54px;
 }
 
 @media (max-width: 768px){
@@ -1527,7 +1527,7 @@ background: $body-section;
       -moz-background-size: cover;
         -o-background-size: cover;
      background-attachment: scroll;
-    }
+    } 
 }
 
 
@@ -1592,7 +1592,7 @@ background-attachment: scroll;
 
 
 .micro-nav-inner{
-    padding-top: 15px;
+    padding-top: 23px;
     font-size: 1em;
     p{
      color: #b7b8bb;
