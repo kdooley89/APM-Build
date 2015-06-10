@@ -1,0 +1,536 @@
+@mixin center-content {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+$evergreen: #35b86c;
+$sky: #18abca;
+$lilac: #9755b5;
+$burnt: #ff9657;
+//Hero Styles & Functions
+.hero-wrapper {
+  height: 725px;
+  padding-top: 75px;
+  overflow: hidden;
+  background-image: url(http://www.dynatrace.com/content/dam/dynatrace/misc/Homepage-Assets/app-mockup-bg.jpg);
+  background-position: left center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and(max-width: 480px) {
+    padding-top: 100px;
+    height: 670px;
+    @include transition (all 300ms linear);
+  }
+}
+
+.hero-rotate-content {
+  padding-top: 20px;
+  z-index: 1;
+  p{
+  font-family: "roboto-thin", "Roboto", "robotoregular", "Helvetica", sans-serif;
+    letter-spacing: 1.2px;
+  }
+  
+  h1 {
+    font-family: "roboto-thin", "Roboto", "robotoregular", "Helvetica", sans-serif;
+    font-weight: 100;
+    font-size: 70px;
+    line-height: 1;
+    color: white;
+    height: 210px;
+    @media screen and (max-width: 1024px) {
+      font-size: 60px;
+    }
+    @media screen and (max-width: 480px) {
+      height: auto;
+      font-size: 45px;
+      line-height: 1.23;
+    }
+  }
+}
+
+.dt-app-screen-outer {
+  @extend .col-md-6;
+  padding-top: 45px;
+  @media screen and (max-width:992px){
+   margin-left: 345px;
+  }
+}
+
+.laptop-slider-wrapper {
+  background: url('http://www.dynatrace.com/content/dam/dynatrace/misc/Homepage-Assets/macbook-mockup.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+  width: 964px;
+  min-height: 576px;
+  z-index: 2;
+  @media screen and (max-width: 1024px) {
+    width: 760px;
+    min-height: 576px;
+  }
+}
+
+
+.app-preview-screen {
+  @include transition(all 300ms ease);
+  position: absolute;
+  margin-top: 48px;
+  margin-left: 122px;
+  min-width: 624px;
+  @media screen and (max-width: 1024px) {
+    position: absolute;
+    margin-top: 41px;
+    margin-left: 105px;
+    min-width: 540px;
+  }
+}
+
+.dt-rotate-content-inner {
+  padding-top: 60px;
+}
+
+#rotate {
+  float: left;
+  display: inline-block;
+  b {
+    font-family: $fontstack;
+    font-size: 52px;
+    @media screen and (max-width: 480px) {
+      font-size: 45px;
+    }
+  }
+}
+
+
+.cursor{
+min-height: 55px!important;
+  display: inline-block;
+  margin-left: 10px;
+  border-left: 3px solid white;
+  -webkit-animation-name: blinker;
+    -webkit-animation-duration: 900ms;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 900ms;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blinker;
+    animation-duration: 900ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+
+
+.hero-subtext {
+  margin-top: 20px;
+  display: inline-block;
+  color: white;
+  font-size: 1.2em;
+}
+
+.break {
+  float: left;
+  display: inline;
+  padding-right: 10px;
+}
+
+.main {
+  background-color: #fff;
+  margin-top: -125px;
+  z-index: 1;
+  height: 900px;
+}
+
+//End Hero Styles
+
+
+
+
+//Customer Roll Call
+.dt-customer-roll-call {
+  height: 140px;
+  background-color: #39393C;
+  @media(max-width:$break-small){
+  display: none;
+  }
+}
+
+.seven-cols{
+  padding-top: 50px;
+  @media(max-width: 992px) {
+    padding-top: 60px;
+  }
+  img:hover {
+    opacity: .5;
+    @include transition (all 300ms linear);
+  }
+}
+
+.seven-cols .col-md-1,
+.seven-cols .col-sm-1,
+.seven-cols .col-lg-1 {
+  width: 14.285714285714285714285714285714%;
+  *width: 14.285714285714285714285714285714%;
+}
+
+
+
+
+// 4 Main Features
+.homepage-highlight-wrap {
+  @extend .col-md-3;
+  height: 300px;
+  position: relative;
+  background-color: #dddddd;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  @media screen and (max-width:$break-small){
+    height: 225px;
+  }
+  
+  @media screen and (max-width:$break-x-small){
+    height: 170px;
+  }
+  
+  
+}
+
+.dt-highlight-inner {
+  font-family: 'Roboto', 'robotoregular', 'helvetica', 'arial', sans-serif;
+  color: black;
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.8em;
+  position: absolute;
+  font-size: 28px;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  @media screen and (max-width:1024px){
+  font-size: 23px;
+  }
+}
+
+
+
+//custom backgrounds for Highlight containers
+.home-fact-one {
+  background-image: url(http://www-mktqa1.gomezlabs.com/content/dam/dynatrace/misc/Homepage-Assets/point-one.jpg);
+}
+
+.home-fact-two {
+  background-image: url(http://placehold.it/519x347/0c4677/0c4677);
+}
+
+.home-fact-three {
+  background-image: url(http://www-mktqa1.gomezlabs.com/content/dam/dynatrace/misc/Homepage-Assets/point-three.jpg);
+}
+
+.home-fact-four {
+  background-image: url(http://placehold.it/519x347/18abca/18abca);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Video Containers
+.dt-video-wrapper {
+  @extend .col-sm-4;
+  padding: 0px;
+  border-right: 3px white solid;
+  @media screen and (max-width:480px){
+    margin-bottom: 51px;
+    border-bottom: 2px solid #dddddd;
+    border-top: 2px solid #dddddd;
+    border-right: none;
+  }
+}
+
+.dt-video-wrapper:nth-of-type(3) {
+  border-right: none;
+}
+
+.dt-video-content {
+  background-color: #f8f8f8;
+  padding: 25px;
+  height: 200px;
+  img {
+    max-width: 222px;
+    margin-bottom: 25px;
+  }
+}
+
+
+.dt-content-img {
+  height: 85px;
+}
+
+.dt-left-video {
+  background-image: url(http://www-mktqa1.gomezlabs.com/content/dam/dynatrace/misc/Homepage-Assets/constant-contact-square.jpg);
+}
+
+.dt-center-video {
+  background-image: url(http://www-mktqa1.gomezlabs.com/content/dam/dynatrace/misc/Homepage-Assets/mcgraw-hill-square.jpg);
+}
+
+.dt-right-video {
+  background-image: url(http://www-mktqa1.gomezlabs.com/content/dam/dynatrace/misc/Homepage-Assets/nordstrom-square.jpg);
+}
+
+.dt-main-video {
+  height: 250px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.playhead-center {
+  z-index: 3;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &:hover {
+    width: 75px;
+    @include transition (all 400ms ease);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.93);
+    border-radius: 50%;
+  }
+}
+
+
+//Product Containers
+.product-roll-wrapper {
+  @extend .container;
+  margin-bottom: 100px;
+  clear: both;
+}
+
+.product-intro {
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 90px;
+  h2 {
+    font-family: 'roboto-thin', "roboto", sans-serif;
+    margin-top: 90px;
+    font-size: 40px;
+    font-weight: 100;
+  }
+  
+  p {
+    padding-top: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  span {
+    padding-top: 15px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+.product-outer {
+  padding: 15px;
+}
+
+.product-wrap {
+  height: 325px;
+  border: 1px solid #dfdfdf;
+  .product-brand {
+    top: 0;
+    left: 0;
+    position: relative;
+    float: left;
+    padding-right: 25px;
+  }
+}
+
+//border hover effects
+.app-mon:hover {
+  @extend .product-wrap;
+  border: 1px solid $evergreen;
+  @include transition (border 300ms ease-in-out);
+}
+
+.uem:hover {
+  @extend .product-wrap;
+  border: 1px solid $sky;
+  @include transition (border 300ms ease-in-out);
+}
+
+.synth:hover {
+  @extend .product-wrap;
+  border: 1px solid $burnt;
+  @include transition (border 300ms ease-in-out);
+}
+
+.dcrum:hover {
+  @extend .product-wrap;
+  border: 1px solid $lilac;
+  @include transition (border 300ms ease-in-out);
+}
+
+.prod-title {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 35px;
+  text-align: left;
+  h2 {
+    font-size: 21px;
+    padding-top: 10px;
+    @media(max-width: 769px) {
+      padding-top: 0px;
+    }
+    @media(max-width:480px) {
+      font-size: 19px;
+    }
+  }
+  @media(max-width:480px) {
+    text-align: left;
+  }
+}
+
+.prod-content {
+  display: block;
+  margin-top: 53px;
+  padding: 35px;
+  line-height: 2;
+}
+
+.prod-button {
+  //keep empty for spacing
+}
+
+//Button Mixins
+@mixin button-base {
+  font-family: 'Open Sans', 'Helvetica';
+  font-weight: 100;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 45px 10px 45px;
+  height: 40px;
+  display: inline;
+  @include transition (all 300ms ease);
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.app-mon-button {
+  @include button-base;
+  background-color: $evergreen;
+  &:hover {
+    background-color: darken($evergreen, 10%);
+  }
+}
+
+.uem-button {
+  @include button-base;
+  background-color: $sky;
+  &:hover {
+    background-color: darken($sky, 10%);
+  }
+}
+
+.synth-button {
+  @include button-base;
+  background-color: $burnt;
+  &:hover {
+    background-color: darken($burnt, 10%);
+  }
+}
+
+.dcrum-button {
+  @include button-base;
+  background-color: $lilac;
+  &:hover {
+    background-color: darken($lilac, 10%);
+  }
+}
+
+.dt-default {
+  font-family: "Open Sans", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", "宋体", "SimSun", "STXihei", "华文细黑", "Apple SD Gothic Neo UltraLight", "Gulim", "GulimChe", "Helvetica", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: 1px;
+  background-color: $apm-green;
+  color: #eee;
+  text-align: center;
+  text-transform: uppercase;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+  &:hover, :active, :focus, :visited {
+    background-color: darken( $apm-green, 10%);
+    @include transition (all 300ms ease-in-out);
+    color: white;
+    text-decoration: none;
+  }
+}

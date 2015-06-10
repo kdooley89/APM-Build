@@ -2925,6 +2925,18 @@ item-roll:nth-of-type{
 } 
 
 
+.bio-bm{
+ @include bio-bg;
+  @include bio-bg;
+  background-image:url(/content/dam/dynatrace/misc/About-Us-Executives/bm-headshot.jpg);
+} 
+
+.bio-lm{
+  @include bio-bg; 
+  @include bio-bg;  
+  background-image:url(/content/dam/dynatrace/misc/About-Us-Executives/lm-headshot.jpg);
+}
+
 
   //bio inner
 
@@ -3061,7 +3073,7 @@ padding-top:35px;
 border-bottom: 2px solid #eeeeee;
 }
 
-.bio-jvs,.bio-bg,.bio-st,.bio-nr,.bio-ah,.bio-ef,.bio-la,.bio-jr,.bio-df,.bio-th,.bio-ks{
+.bio-jvs,.bio-bg,.bio-st,.bio-nr,.bio-ah,.bio-ef,.bio-la,.bio-jr,.bio-df,.bio-th,.bio-ks,.bio-lm,.bio-bm{
 display:none;
 }
 
