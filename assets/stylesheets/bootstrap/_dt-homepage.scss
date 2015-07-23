@@ -11,18 +11,24 @@ $evergreen: #35b86c;
 $sky: #18abca;
 $lilac: #9755b5;
 $burnt: #ff9657;
+
+
+
 //Hero Styles & Functions
 .hero-wrapper {
   height: 725px;
-  padding-top: 75px;
+  //padding-top: 75px;
   overflow: hidden;
-  background-image: url(http://www.dynatrace.com/content/dam/dynatrace/misc/Homepage-Assets/app-mockup-bg.jpg);
+  background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/Hero-bg-dark.jpg);
   background-position: left center;
   background-size: cover;
   background-repeat: no-repeat;
-  @media screen and(max-width: 480px) {
-    padding-top: 100px;
-    height: 670px;
+  @media screen and (max-width: $break-small) {
+    height: 545px;
+  }
+  @media screen and(max-width: $break-x-small) {
+    padding-top: 50px;
+    height: 440px;
     @include transition (all 300ms linear);
   }
 }
@@ -30,11 +36,10 @@ $burnt: #ff9657;
 .hero-rotate-content {
   padding-top: 20px;
   z-index: 1;
-  p{
-  font-family: "roboto-thin", "Roboto", "robotoregular", "Helvetica", sans-serif;
+  p {
+    font-family: "roboto-thin", "Roboto", "robotoregular", "Helvetica", sans-serif;
     letter-spacing: 1.2px;
   }
-  
   h1 {
     font-family: "roboto-thin", "Roboto", "robotoregular", "Helvetica", sans-serif;
     font-weight: 100;
@@ -45,10 +50,22 @@ $burnt: #ff9657;
     @media screen and (max-width: 1024px) {
       font-size: 60px;
     }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: $break-x-small) {
       height: auto;
-      font-size: 45px;
+      font-size: 35px;
       line-height: 1.23;
+    }
+  }
+}
+
+#rotate {
+  float: left;
+  display: inline-block;
+  b {
+    font-family: $fontstack;
+    font-size: 52px;
+    @media screen and (max-width: $break-x-small) {
+      font-size: 30px;
     }
   }
 }
@@ -56,13 +73,13 @@ $burnt: #ff9657;
 .dt-app-screen-outer {
   @extend .col-md-6;
   padding-top: 45px;
-  @media screen and (max-width:992px){
-   margin-left: 345px;
+  @media screen and (max-width: $break-medium) {
+    margin-left: 345px;
   }
 }
 
 .laptop-slider-wrapper {
-  background: url('http://www.dynatrace.com/content/dam/dynatrace/misc/Homepage-Assets/macbook-mockup.png');
+  background: url('/content/dam/dynatrace/misc/Homepage-Assets/macbook-mockup-res.png');
   background-repeat: no-repeat;
   background-position: top left;
   background-size: contain;
@@ -75,79 +92,86 @@ $burnt: #ff9657;
   }
 }
 
-
 .app-preview-screen {
   @include transition(all 300ms ease);
   position: absolute;
   margin-top: 48px;
   margin-left: 122px;
   min-width: 624px;
+  height: 394px;
   @media screen and (max-width: 1024px) {
     position: absolute;
     margin-top: 41px;
     margin-left: 105px;
     min-width: 540px;
+    height: 340px;
   }
 }
 
 .dt-rotate-content-inner {
-  padding-top: 60px;
-}
-
-#rotate {
-  float: left;
-  display: inline-block;
-  b {
-    font-family: $fontstack;
-    font-size: 52px;
-    @media screen and (max-width: 480px) {
-      font-size: 45px;
-    }
+  padding-top: 110px;
+  @media screen and (max-width:$break-x-small){
+  padding-top: 20px; //reset to 60px with new menu//
   }
 }
 
-
-.cursor{
-min-height: 55px!important;
+.cursor {
+  min-height: 55px;
   display: inline-block;
   margin-left: 10px;
   border-left: 3px solid white;
   -webkit-animation-name: blinker;
-    -webkit-animation-duration: 900ms;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-
-    -moz-animation-name: blinker;
-    -moz-animation-duration: 900ms;
-    -moz-animation-timing-function: linear;
-    -moz-animation-iteration-count: infinite;
-
-    animation-name: blinker;
-    animation-duration: 900ms;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+  -webkit-animation-duration: 900ms;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: blinker;
+  -moz-animation-duration: 900ms;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  animation-name: blinker;
+  animation-duration: 900ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  @media screen and (max-width: $break-x-small) {
+    min-height: 30px;
+  }
 }
 
-
-@-moz-keyframes blinker {  
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
+@-moz-keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
 }
 
-@-webkit-keyframes blinker {  
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
+@-webkit-keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
 }
 
-@keyframes blinker {  
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
+@keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
 }
-
-
 
 .hero-subtext {
   margin-top: 20px;
@@ -162,37 +186,50 @@ min-height: 55px!important;
   padding-right: 10px;
 }
 
-.main {
-  background-color: #fff;
-  margin-top: -125px;
-  z-index: 1;
-  height: 900px;
-}
+
 
 //End Hero Styles
 
 
+//Customer Roll Call 
 
-
-//Customer Roll Call
 .dt-customer-roll-call {
   height: 140px;
-  background-color: #39393C;
-  @media(max-width:$break-small){
-  display: none;
+  background-color: #f6f6f6;
+  padding-top: 50px;
+  @media(max-width: $break-small) {
+    padding-top: 0px;
+    display: inline;
+    height: auto; 
   }
 }
 
-.seven-cols{
+
+@media screen and (max-width:$break-small){
+.dt-customer-img{
+    padding-top: 20px;
+    padding-bottom: 20px;
+ }
+}
+
+
+.seven-cols {
   padding-top: 50px;
-  @media(max-width: 992px) {
-    padding-top: 60px;
+  @media(max-width: $break-medium) {
+    padding-top: 60px;  
   }
+  @media(max-width: $break-small){
+  padding-top: 0px;
+  }
+  
   img:hover {
     opacity: .5;
     @include transition (all 300ms linear);
   }
 }
+
+
+
 
 .seven-cols .col-md-1,
 .seven-cols .col-sm-1,
@@ -203,86 +240,94 @@ min-height: 55px!important;
 
 
 
-
 // 4 Main Features
 .homepage-highlight-wrap {
-  @extend .col-md-3;
+  @extend .col-sm-3;
   height: 300px;
   position: relative;
-  background-color: #dddddd;
+  background-color: white;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  overflow-x: hidden;
   
-  @media screen and (max-width:$break-small){
+  @media screen and (max-width: $break-small) {
     height: 225px;
   }
-  
-  @media screen and (max-width:$break-x-small){
+  @media screen and (max-width: $break-x-small) {
     height: 170px;
   }
-  
-  
 }
 
-.dt-highlight-inner {
+.dt-highlight-inner p{
+   margin: 0px;
+}
+
+
+.dt-highlight-inner a {
   font-family: 'Roboto', 'robotoregular', 'helvetica', 'arial', sans-serif;
   color: black;
+  text-decoration: none;
   text-align: center;
   font-weight: 100;
   font-size: 1.8em;
   position: absolute;
-  font-size: 28px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 24px;
   width: 90%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
-  @media screen and (max-width:1024px){
-  font-size: 23px;
-  }
+  @include transition (all 300ms ease);
 }
 
 
+.accent-black a{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  @include transition (all 300ms ease);
+}
+
+.accent-white a{
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  @include transition (all 300ms ease);
+}
+
+.accent-black a:hover {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.accent-white a:hover {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
 
 //custom backgrounds for Highlight containers
 .home-fact-one {
-  background-image: url(http://www-mktqa1.gomezlabs.com/content/dam/dynatrace/misc/Homepage-Assets/point-one.jpg);
+  background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/point-one.jpg);
 }
 
 .home-fact-two {
-  background-image: url(http://placehold.it/519x347/0c4677/0c4677);
+  background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/point-two.jpg);
 }
 
 .home-fact-three {
-  background-image: url(http://www-mktqa1.gomezlabs.com/content/dam/dynatrace/misc/Homepage-Assets/point-three.jpg);
+  background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/point-three.jpg);
 }
 
 .home-fact-four {
-  background-image: url(http://placehold.it/519x347/18abca/18abca);
+  background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/keynote-bg.jpg);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 //Video Containers
 .dt-video-wrapper {
   @extend .col-sm-4;
   padding: 0px;
   border-right: 3px white solid;
-  @media screen and (max-width:480px){
-    margin-bottom: 51px;
-    border-bottom: 2px solid #dddddd;
-    border-top: 2px solid #dddddd;
+  @media screen and (max-width: $break-x-small) {
     border-right: none;
   }
 }
@@ -301,21 +346,20 @@ min-height: 55px!important;
   }
 }
 
-
 .dt-content-img {
   height: 85px;
 }
 
 .dt-left-video {
-  background-image: url(http://www-mktqa1.gomezlabs.com/content/dam/dynatrace/misc/Homepage-Assets/constant-contact-square.jpg);
+  background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/constant-contact-square.jpg);
 }
 
 .dt-center-video {
-  background-image: url(http://www-mktqa1.gomezlabs.com/content/dam/dynatrace/misc/Homepage-Assets/mcgraw-hill-square.jpg);
+  background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/mcgraw-hill-square.jpg);
 }
 
 .dt-right-video {
-  background-image: url(http://www-mktqa1.gomezlabs.com/content/dam/dynatrace/misc/Homepage-Assets/nordstrom-square.jpg);
+  background-image: url(/content/dam/dynatrace/misc/Homepage-Assets/nordstrom-square.jpg);
 }
 
 .dt-main-video {
@@ -323,6 +367,9 @@ min-height: 55px!important;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  @media screen and(max-width: $break-small) {
+    background-position: top center;
+  }
 }
 
 .playhead-center {
@@ -346,7 +393,75 @@ min-height: 55px!important;
 }
 
 
+//logo sprites
+.cc-homepage-logo, .mcgraw-ed-logo, .nordstrom-res{
+	background: url(/content/dam/dynatrace/misc/Homepage-Assets/company-sprites.png) no-repeat;
+    background-size: 90%;
+}
+
+.cc-homepage-logo{
+  background-position: 0 0;
+  width: 290px;
+  height: 50px; 
+}
+
+.mcgraw-ed-logo{
+  background-position: 0px -58px;
+  width: 276px;
+  height: 60px;
+}
+ 
+.nordstrom-res{
+  background-position: 0px -116px;
+  width: 272px;
+  height: 42px;
+}
+
+
+
+
+
+
+
 //Product Containers
+
+.uem-icon, .synth-icon, .app-mon-icon, .dcrum-icon{
+  background: url(/content/dam/dynatrace/misc/Homepage-Assets/app-icons.png) no-repeat;
+  top: 16px;
+  left: 16px;
+  display: inline-block;
+  float: left;
+  margin-right: 15px;
+}
+
+.uem-icon{
+	background-position: 0 0;
+	width: 80px;
+	height: 80px;
+}
+
+.synth-icon{
+	background-position: -85px 0;
+	width: 80px;
+	height: 80px;
+}
+
+.app-mon-icon{
+	background-position: 0 -86px ;
+	width: 80px;
+	height: 80px;
+}
+
+.dcrum-icon{
+	background-position: -85px -86px ;
+	width: 79px;
+	height: 79px;
+}
+
+
+
+
+
 .product-roll-wrapper {
   @extend .container;
   margin-bottom: 100px;
@@ -356,14 +471,13 @@ min-height: 55px!important;
 .product-intro {
   text-align: center;
   line-height: 2;
-  margin-bottom: 90px;
+  margin-bottom: 30px;
   h2 {
     font-family: 'roboto-thin', "roboto", sans-serif;
     margin-top: 90px;
     font-size: 40px;
     font-weight: 100;
   }
-  
   p {
     padding-top: 30px;
     max-width: 800px;
@@ -371,7 +485,6 @@ min-height: 55px!important;
     margin-right: auto;
     display: block;
   }
-  
   span {
     padding-top: 15px;
     font-weight: 400;
@@ -379,19 +492,12 @@ min-height: 55px!important;
   }
 }
 
-
-
-
-
-
-
-
 .product-outer {
   padding: 15px;
 }
 
 .product-wrap {
-  height: 325px;
+  height: 300px;
   border: 1px solid #dfdfdf;
   .product-brand {
     top: 0;
@@ -399,6 +505,9 @@ min-height: 55px!important;
     position: relative;
     float: left;
     padding-right: 25px;
+  }
+  @media(max-width:$break-x-small) {
+    height: 350px;
   }
 }
 
@@ -439,18 +548,18 @@ min-height: 55px!important;
     @media(max-width: 769px) {
       padding-top: 0px;
     }
-    @media(max-width:480px) {
+    @media(max-width:$break-x-small) {
       font-size: 19px;
     }
   }
-  @media(max-width:480px) {
+  @media(max-width:$break-x-small) {
     text-align: left;
   }
 }
 
 .prod-content {
   display: block;
-  margin-top: 53px;
+  margin-top: 30px;
   padding: 35px;
   line-height: 2;
 }
@@ -468,12 +577,35 @@ min-height: 55px!important;
   text-transform: uppercase;
   padding: 10px 45px 10px 45px;
   height: 40px;
-  display: inline;
+  display: inline-block;
   @include transition (all 300ms ease);
   &:hover {
     text-decoration: none;
     color: white;
   }
+  &:focus{
+  color: white;
+    text-decoration: none;
+  }
+  
+}
+
+.hero-cta {
+  @include button-base;
+  background-color: $apm-green;
+  outline: 2px solid $apm-green;
+  outline-offset: 4px;
+  &:hover {
+    background-color: $apm-green;
+    outline: 2px solid $apm-green;
+    outline-offset: 8px;
+  }
+  &:active {
+    outline-offset: 0px;
+    background-color: $apm-green;
+    text-decoration: none;
+    outline: none;
+  } 
 }
 
 .app-mon-button {
@@ -532,5 +664,26 @@ min-height: 55px!important;
     @include transition (all 300ms ease-in-out);
     color: white;
     text-decoration: none;
-  }
+  }  
+}
+
+//extra carousel controls
+.control-offset {
+  top: 0%;
+}
+
+.dt-carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+
+.dt-home-featured{
+  padding: 30px;
+  margin-bottom: 50px;
 }

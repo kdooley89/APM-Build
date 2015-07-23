@@ -477,6 +477,72 @@ p span.spacer{
 
 
 
+//APM icon sprites
+
+.APM-ONE, .APM-TWO, .APM-THREE, .APM-FOUR, .APM-FIVE, .APM-SIX, .APM-SEVEN, .APM-EIGHT, .APM-NINE{
+	background: url(/apm-icons.png) no-repeat;
+}
+
+.APM-ONE{
+	background-position: 0 0;
+	width: 56px;
+	height: 53px;
+}
+
+.APM-TWO{
+	background-position: -78px 0;
+	width: 49px;
+	height: 52px;
+}
+
+.APM-THREE{
+	background-position: -146px 0;
+	width: 52px;
+	height: 47px;
+}
+
+.APM-FOUR{
+	background-position: -217px 0;
+	width: 51px;
+	height: 49px;
+}
+
+.APM-FIVE{
+	background-position: -285px 0;
+	width: 51px;
+	height: 52px;
+}
+
+.APM-SIX{
+	background-position: -360px 0;
+	width: 43px;
+	height: 53px;
+}
+
+.APM-SEVEN{
+	background-position: -423px 0;
+	width: 55px;
+	height: 49px;
+}
+
+.APM-EIGHT{
+	background-position: -504px 0;
+	width: 48px;
+	height: 42px;
+}
+
+.APM-NINE{
+	background-position: -578px 0;
+	width: 62px;
+	height: 48px;
+}
+
+
+
+
+
+
+
 //testimony --------------------------------------------------
 
 .testimony{
@@ -1571,11 +1637,35 @@ background-attachment: scroll;
     text-align: center;
     margin-left:auto;
     margin-right: auto;
-    margin-left:-15px;
+    display: block;
     h1 span{
         font-size: 1.4em;
+        background-color: rgba(0,0,0,.65);
+        padding: 20px;
+        color: #ffffff;
+        font-weight: 200;
     }
 }
+
+@media screen and (max-width:768px){
+.init-cont {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: rgba(0,0,0,0.7);
+  padding: 10px;
+  padding-bottom: 15px;
+  h1 span{
+        font-size: 1.1em;
+        background-color: rgba(0,0,0,0);
+        padding: 0px;
+        color: #ffffff;
+        font-weight: 200;
+    }
+  }
+}
+
 
 .init-title{
     text-align: center;
@@ -1635,13 +1725,10 @@ border-bottom: 2px solid #d1d1d1;
 padding-top: 50px;
 padding-bottom: 50px;
 //border-bottom: 2px solid #d1d1d1;
-    img{
-     border: 1px solid #d1d1d1;
-    }
 }
 .apm-init-features:nth-last-child(1){
     border-bottom: none;
-}
+} 
 
 
 .apm-init-outer:nth-of-type(even){
@@ -1768,7 +1855,7 @@ margin-top:70px;
     margin-top: 25px;
 }
 
-.break{
+.partner-title-break{
      border-bottom:4px solid #222222;
      margin-bottom: 30px;
             }
@@ -2937,6 +3024,11 @@ item-roll:nth-of-type{
   background-image:url(/content/dam/dynatrace/misc/About-Us-Executives/lm-headshot.jpg);
 }
 
+.bio-hw{
+  @include bio-bg;
+  @include bio-bg;
+  background-image: url(/content/dam/dynatrace/misc/About-Us-Executives/hw-headshot.jpg);
+}
 
   //bio inner
 
@@ -3073,7 +3165,7 @@ padding-top:35px;
 border-bottom: 2px solid #eeeeee;
 }
 
-.bio-jvs,.bio-bg,.bio-st,.bio-nr,.bio-ah,.bio-ef,.bio-la,.bio-jr,.bio-df,.bio-th,.bio-ks,.bio-lm,.bio-bm{
+.bio-jvs,.bio-bg,.bio-st,.bio-nr,.bio-ah,.bio-ef,.bio-la,.bio-jr,.bio-df,.bio-th,.bio-ks,.bio-lm,.bio-bm,.bio-hw{
 display:none;
 }
 
@@ -3105,10 +3197,7 @@ display:none;
 //HOMEPAGE TICKER
 
 .ticker-wrap{
-  background-image:url(/content/dam/dynatrace/misc/backgrounds/ticker_bg.jpg);
-  background-size:cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color:#363c3d;
   min-height:200px;
   padding-top:15px;
   padding-bottom:15px;
@@ -3123,14 +3212,17 @@ display:none;
 
 
 
-.ticker_content{
-  padding:50px;
-  padding-bottom:80px;
-  width:100%;
+.ticker_content {
+  padding: 50px;
+  padding-bottom: 80px;
+  width: 90%;
   color: white;
-  font-weight:600;
-  text-align:center;
-  font-size:28px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   a{
     color: white;
     text-decoration:none;
