@@ -3349,3 +3349,21 @@ width: 100%;
 
 
 
+
+//technology images absolute positioning
+
+.absolute-center{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.tech-absolute-wrap{
+  min-height: 350px!important;
+}
+
+
+
+
+

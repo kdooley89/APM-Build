@@ -294,7 +294,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6 ft-one">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <br>
-                    <img class="img-responsive img-center" src="assets/img/products-icons-apm/APM-ONE.png">
+                    <div class="APM-ONE"></div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 apm-grid">
                     <h3>See it. Find it. Fix it. Done</h3>
@@ -306,7 +306,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 ft-two">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <br>
-                    <img class="img-responsive img-center" src="assets/img/products-icons-apm/APM-TWO.png">
+                     <div class="APM-TWO"></div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 apm-grid">
                     <h3>Trace any transaction, no 
@@ -321,7 +321,7 @@ matter where it goes
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 ft-three">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <br>
-                    <img class="img-responsive img-center" src="assets/img/products-icons-apm/APM-THREE.png">
+                    <div class="APM-THREE"></div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 apm-grid">
                     <h3>Go from end-user level 
@@ -333,7 +333,7 @@ to code-level in seconds</h3>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 ft-four">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <br>
-                    <img class="img-responsive img-center" src="assets/img/products-icons-apm/APM-FOUR.png">
+                    <div class="APM-FOUR"></div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 apm-grid">
                     <h3>Isolate and share exact 
@@ -346,7 +346,7 @@ problem context</h3>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 ft-five">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <br>
-                    <img class="img-responsive img-center" src="assets/img/products-icons-apm/APM-FIVE.png">
+                     <div class="APM-FIVE"></div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 apm-grid">
                     <h3>Gap-free data eliminates 
@@ -361,7 +361,7 @@ blind-spots</h3>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 ft-six">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <br>
-                    <img class="img-responsive img-center" src="assets/img/products-icons-apm/APM-SIX.png">
+                     <div class="APM-SIX"></div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 apm-grid">
                     <h3>Simplify, automate & 
@@ -374,7 +374,7 @@ manage the complex</h3>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 ft-seven">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <br>
-                    <img class="img-responsive img-center" src="assets/img/products-icons-apm/APM-SEVEN.png">
+                     <div class="APM-SEVEN"></div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 apm-grid">
                     <h3>Designed for continous 
@@ -387,7 +387,7 @@ delivery processes</h3>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 ft-eight">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <br>
-                    <img class="img-responsive img-center" src="assets/img/products-icons-apm/APM-EIGHT.png">
+                     <div class="APM-EIGHT"></div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 apm-grid">
                     <h3>Don't reproduce failures, 
@@ -400,7 +400,7 @@ just watch the replay</h3>
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 ft-nine">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <br>
-                    <img class="img-responsive img-center" src="assets/img/products-icons-apm/APM-NINE.png">
+                     <div class="APM-NINE"></div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 apm-grid">
                     <h3>Eliminate false alarms</h3>
@@ -1046,62 +1046,9 @@ just watch the replay</h3>
 
 
 
-    <script>
-        // Cache selectors
-        var lastId,
-            topMenu = $(".sticky"),
-            topMenuHeight = topMenu.outerHeight() + 15,
-            // All list items
-            menuItems = topMenu.find("a"),
-            // Anchors corresponding to menu items
-            scrollItems = menuItems.map(function () {
-                var item = $($(this).attr("href"));
-                if (item.length) {
-                    return item;
-                }
-            });
-
-         // Bind click handler to menu items
-         // so we can get a fancy scroll animation
-        menuItems.click(function (e) {
-            var href = $(this).attr("href"),
-                offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
-            $('html, body').stop().animate({
-                scrollTop: offsetTop
-            }, 300);
-            e.preventDefault();
-        });
-
-         // Bind to scroll
-        $(window).scroll(function () {
-            // Get container scroll position
-            var fromTop = $(this).scrollTop() + topMenuHeight;
-
-            // Get id of current scroll item
-            var cur = scrollItems.map(function () {
-                if ($(this).offset().top < fromTop)
-                    return this;
-            });
-            // Get the id of the current element
-            cur = cur[cur.length - 1];
-            var id = cur && cur.length ? cur[0].id : "";
-
-            if (lastId !== id) {
-                lastId = id;
-                // Set/remove active class
-                menuItems
-                    .parent().removeClass("active")
-                    .end().filter("[href=#" + id + "]").parent().addClass("active");
-            }
-        });
-    </script>
 
 
-
-    <script>
-        $(".sticky").stick_in_parent(".container")
-    </script>
-
+  
 
 
     <script>
@@ -1109,10 +1056,7 @@ just watch the replay</h3>
     </script>
 
 
-    <script>
-        window.scrollReveal = new scrollReveal();
-    </script>
-
+  
    
     <script src="assets/javascripts/bootstrap/cbpHorizontalSlideOutMenu.min.js"></script>
     <script>

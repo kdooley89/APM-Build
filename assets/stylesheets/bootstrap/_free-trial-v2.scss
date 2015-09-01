@@ -25,9 +25,10 @@
 }
 
 .ft-form-right {
-    padding-top: 60px;
+    padding-top: 3em;
     height: 590px;
-    background-color: rgba(0, 0, 0,.40);
+    min-height: 650px !important;
+    background-color: rgba(0,0,0,0.4);
     padding-left: 15px;
     padding-right: 15px;
 }

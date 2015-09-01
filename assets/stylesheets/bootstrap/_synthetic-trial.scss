@@ -1,0 +1,38 @@
+.st-trial-hero-wrap{
+  min-height: 750px;
+  background-image: url(/synth-trial-hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.st-trial-hero{
+  color: white;
+  //padding-top: 100px;
+}
+
+.synth-regnow{
+  height: 550px;
+}
+
+.st-trial-hero-img{
+  margin-top: 50px;
+}
+
+.st-trial-hero-content{
+  height: 750px;
+    padding-top: 150px;
+}
+
+.st-regnow-wrap{
+  background-color: rgba(255,255,255,.2);
+    height: 750px;
+    padding-top: 150px;
+  @media screen and (max-width:480px){
+    background-color: rgba(255,255,255,0.2);
+    height: 575px;
+    padding-top: 20px;
+  }
+    
+}
